@@ -1,0 +1,109 @@
+
+https://pythonman83.github.io/dys-positif-site-cookies/
+
+https://pythondu83.neocities.org/dys-positif-site-V1/
+
+Compresseur de vidéo :
+https://www.freeconvert.com/video-compressor
+
+lien du formulaire :
+https://formspree.io/f/xpwpbvjz
+
+https://formspree.io/forms/xpwpbvjz/integration
+
+https://formspree.io/forms/xpwpbvjz/submissions
+
+https://formspree.io/forms/xpwpbvjz/overview
+
+
+Site référence :
+https://www.dys-positif.fr/espace-adherent/home
+
+
+Images ateliers : 
+https://fr.freepik.com/photos-vecteurs-libre/troubles-dys
+
+Compresser les images :
+https://tinypng.com/
+https://www.iloveimg.com/fr/compresser-image
+https://www.img2go.com/fr/compresser-image
+https://www.freeconvert.com/fr/image-compressor
+
+Redimensionner une image png :
+https://www.iloveimg.com/fr/redimensionner-image/png-redimensionner#resize-options,pixels
+
+icône bootstrap : 
+https://icons.getbootstrap.com/
+
+icône personne :
+https://icon-icons.com/fr/recherche/icones/personne
+
+minifier js/css :
+https://www.minifier.org/
+
+améliorer qualité images :
+https://www.insmind.com/fr/transformer-photo-hd/
+
+Amélioration d'image par IA : Boostez qualité et résolution :
+https://www.insmind.com/fr/ameliorer-qualite-image/
+
+Générateur de politique de confidentialité :
+https://www.privacypolicygenerator.info/#wizard
+
+
+
+lien à mettre dans le head pour l'affichage des icônes bootstrap 5.3 :
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+Réalisations et contact, les jeux :
+https://www.didacto.com/239-jeux-pour-les-dys-
+
+Vidéo Youtube :
+https://www.youtube.com/watch?v=SidgkXO3u3I
+
+
+Pour optimiser le chargement des images et avoir un bon référencement SEO :
+
+Voici un exemple complet d'une page HTML utilisant l'attribut **srcset** pour proposer plusieurs versions d'une image en fonction de la résolution de l'écran :
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemple d'image responsive avec srcset</title>
+</head>
+<body>
+  <h1>Exemple d'image responsive avec srcset</h1>
+  <!--
+    L'attribut srcset liste différentes versions de l'image avec leur largeur indiquée (exemple : 300w pour 300px de largeur).
+    L'attribut sizes informe le navigateur de la taille d'affichage prévue.
+    Ainsi, le navigateur choisira automatiquement l'image la plus adaptée pour une meilleure performance.
+  -->
+  <img src="images/image-600.jpg" 
+       srcset="images/image-300.jpg 300w,
+               images/image-600.jpg 600w,
+               images/image-900.jpg 900w" 
+       sizes="(max-width: 600px) 100vw, 50vw" 
+       alt="Exemple d'image responsive">
+  
+  <p>L'attribut <code>srcset</code> permet au navigateur de charger l'image la plus adaptée à la taille de l'écran, 
+  assurant ainsi une bonne qualité et un chargement optimisé.</p>
+</body>
+</html>
+
+
+### Explications complémentaires
+
+- srcset : Cet attribut fournit une liste de sources alternatives de l'image, suivies de la largeur de l'image 
+(par exemple, `300w` signifie 300 pixels de largeur). 
+Cela permet au navigateur de sélectionner l'image la plus appropriée selon l'appareil utilisé.
+
+- sizes : Cet attribut précise la largeur à laquelle l'image sera affichée dans le layout. Par exemple, 
+`"(max-width: 600px) 100vw, 50vw"` signifie que si l'écran est inférieur ou égal à 600 pixels de large, 
+l'image occupe 100% de la largeur de la fenêtre (100vw), sinon, elle occupe 50% de la largeur.
+
+- src : Cette image sert d'image par défaut, notamment pour les navigateurs qui ne supportent pas l'attribut **srcset**.
+
+Ce code complet vous permet d'implémenter facilement une image responsive dans vos projets web.

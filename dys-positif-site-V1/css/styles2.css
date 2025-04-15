@@ -1,0 +1,83 @@
+
+
+
+/* FOOTER ÉPOUSTOUFLANT */
+footer {
+    background: linear-gradient(to right, #16222a, #3a6073);
+    color: #ffffff;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  }
+  
+  footer p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    color: #ffffffcc;
+  }
+  
+  footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  footer .footer-links a {
+    color: #ffffffcc;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer .footer-links a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 600px) {
+    footer .footer-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Animation au survol */
+  footer .footer-links a {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  footer .footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffcc00;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  footer .footer-links a:hover::after {
+    transform: translateX(0);
+  }
+
+  /* CSS BOUTON RETOUR HAUT DE PAGE */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    z-index: 999;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  #backToTop.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }

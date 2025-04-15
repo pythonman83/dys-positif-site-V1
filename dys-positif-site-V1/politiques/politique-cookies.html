@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<!-- Définir l'encodage des caractères en UTF-8 pour permettre 
+ l'affichage correct des caractères spéciaux (accents, symboles, etc.) -->
+<meta charset="UTF-8">
+
+<!-- Indiquer à Internet Explorer d'utiliser la dernière version 
+ de son moteur de rendu (mode "Edge") pour une meilleure compatibilité -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Configurer l'affichage pour les appareils mobiles : 
+ la page s'adapte à la largeur de l'écran et le zoom initial est réglé sur 1 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fournir une description de la page pour les moteurs de recherche (SEO) 
+ qui explique le contenu de la page -->
+<meta name="description" content="Politique de cookies du site DYS-POSITIF. Découvrez les types de cookies utilisés, leur durée et votre droit de consentement.">
+
+<!-- Lister des mots-clés relatifs au contenu de la page pour aider 
+ les moteurs de recherche (même si cette balise est moins utilisée aujourd'hui) -->
+<meta name="keywords" content="cookies, politique de cookies, bandeau cookie, consentement RGPD, DYS-Positif, Association Mains Tendues">
+
+<!-- Indiquer l'auteur ou l'organisation responsable du contenu de la page -->
+<meta name="author" content="Association Mains Tendues">
+
+<!-- Indiquer aux moteurs de recherche qu'ils peuvent indexer 
+ la page et suivre les liens présents sur celle-ci -->
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph : ces balises améliorent l'affichage et la visibilité 
+ de la page lorsqu'elle est partagée sur les réseaux sociaux -->
+<meta property="og:title" content="Politique de cookies | DYS-Positif">
+<!-- Définir le titre qui apparaîtra lors du partage sur les réseaux sociaux -->
+<meta property="og:description" content="Détails sur l’utilisation des cookies sur le site DYS-POSITIF : types, finalités, consentement et durée de conservation.">
+<!-- Fournir une description pour l'aperçu lors du partage sur les plateformes sociales -->
+<meta property="og:type" content="website">
+<!-- Spécifier le type de contenu (ici, un site web) -->
+<meta property="og:url" content="https://www.dys-positif.fr/politique-cookies.html">
+<!-- Indiquer l'URL canonique de la page pour un partage correct sur les réseaux sociaux -->
+<meta property="og:image" content="https://www.dys-positif.fr/images/og-cover.jpg">
+<!-- Définir l'image d'aperçu qui sera utilisée lors du partage sur les réseaux sociaux -->
+
+<!-- Twitter Card : ces balises permettent de contrôler l'apparence de la page 
+ lorsqu'elle est partagée sur Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<!-- Choisir une carte Twitter avec une grande image pour une meilleure visibilité -->
+<meta name="twitter:title" content="Politique de cookies | DYS-Positif">
+<!-- Définir le titre qui sera affiché dans la Twitter Card -->
+<meta name="twitter:description" content="Politique de cookies conforme RGPD pour l'association DYS-POSITIF. Types de cookies, durée et informations de contact.">
+<!-- Fournir une description pour l'aperçu sur Twitter -->
+<meta name="twitter:image" content="https://www.dys-positif.fr/images/og-cover.jpg">
+<!-- Définir l'image qui sera utilisée dans la Twitter Card -->
+
+<!-- Favicon : définir l'icône affichée dans l'onglet du navigateur et dans la liste des favoris -->
+<link rel="icon" href="../images/logo.png" type="image/x-icon">
+
+<!-- Définir le titre de la page, qui s'affiche dans l'onglet du navigateur -->
+<title>Politique de cookies | DYS-Positif</title>
+
+<!-- Lier la feuille de styles externe qui contient les règles de mise en forme du site -->
+<link rel="stylesheet" href="../css/styles3.css">
+
+</head>
+
+<body>
+
+  <!-- Bouton pour basculer entre le mode sombre et le mode clair -->
+  <button id="modeToggle" onclick="toggleDarkMode()" style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 10px 20px; background: #002244; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+    Mode Sombre
+  </button>
+
+  <main class="container py-5">
+
+    <h1>Politique de cookies</h1>
+
+    <p>
+      Ce site utilise des cookies pour garantir son bon fonctionnement et améliorer l'expérience utilisateur.
+    </p>
+
+    <p>
+      <strong>Types de cookies :</strong><br>
+      - <strong>Nécessaires</strong> : fonctionnement du site<br>
+      - <strong>Statistiques</strong> : mesure d'audience<br>
+      - <strong>Fonctionnels</strong> : préférences utilisateur
+    </p>
+
+    <p>
+      <strong>Consentement :</strong> demandé via un bandeau à la première visite.
+    </p>
+
+    <p>
+      <strong>Durée de conservation :</strong> 13 mois.
+    </p>
+
+    <p>
+      <strong>Contact :</strong> <a href="mailto:contact@dys-positif.fr">contact@dys-positif.fr</a>
+    </p>
+
+  </main>
+
+  <footer>
+
+    <div class="container text-center">
+
+      <p style="text-align: center;">&copy; 2025 Association DYS-POSITF. Tous droits réservés.</p>
+
+      <div class="footer-links">
+
+        <a href="mentions-legales.html">Mentions légales</a>
+
+        <a href="politique-confidentialite.html">Confidentialité</a>
+
+        <a href="politique-cookies.html">Cookies</a>
+
+        <a href="cgu.html">Conditions d'utilisation</a>
+
+        <a href="politique-enfants.html">Données des enfants</a>
+
+        <a href="politique-securite.html">Sécurité</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+<!-- Script JavaScript pour basculer entre le mode sombre et le mode clair -->
+<script>
+  // Définir la fonction 'toggleDarkMode' qui permettra de basculer 
+  // entre le mode sombre et le mode clair
+  function toggleDarkMode() {
+
+  // Bascule la classe "dark-mode" sur l'élément <html> pour changer l'apparence globale du site
+  document.documentElement.classList.toggle('dark-mode');
+
+  // Récupère l'élément bouton ayant l'ID 'modeToggle' afin de pouvoir modifier son texte
+  let btn = document.getElementById('modeToggle');
+
+  // Vérifie si l'élément <html> possède la classe "dark-mode" pour déterminer le mode actuellement activé
+  if (document.documentElement.classList.contains('dark-mode')) {
+
+   // Si la classe "dark-mode" est présente, modifie le texte du bouton pour indiquer "Mode Clair"
+   btn.innerText = 'Mode Clair';
+
+  } else {
+
+    // Sinon, modifie le texte du bouton pour indiquer "Mode Sombre"
+    btn.innerText = 'Mode Sombre';
+
+  }
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<!-- Définir l'encodage des caractères en UTF-8 pour permettre 
+ l'affichage correct des caractères spéciaux (accents, symboles, etc.) -->
+<meta charset="UTF-8">
+
+<!-- Indiquer à Internet Explorer d'utiliser la dernière 
+ version de son moteur de rendu (mode "Edge") pour une meilleure compatibilité -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Configurer l'affichage pour les appareils mobiles : 
+ la largeur de la page s'adapte à celle de l'écran et le zoom initial est réglé sur 1 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fournir une description de la page pour les moteurs de recherche (SEO) -->
+<meta name="description" content="Découvrez la politique de confidentialité de l'association DYS-Positif concernant la collecte, l'utilisation et la protection de vos données.">
+
+<!-- Lister des mots-clés relatifs au contenu de la page afin d'aider 
+ les moteurs de recherche (même si cette balise est moins utilisée aujourd'hui) -->
+<meta name="keywords" content="politique de confidentialité, données personnelles, RGPD, DYS-Positif, vie privée, protection des données, enfants">
+
+<!-- Identifier l'auteur ou l'organisation responsable du contenu de la page -->
+<meta name="author" content="Association Mains Tendues">
+
+<!-- Indiquer aux moteurs de recherche qu'ils peuvent indexer la page 
+ et suivre les liens présents sur celle-ci -->
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph : ces balises améliorent l'affichage et la visibilité 
+ de la page lorsqu'elle est partagée sur les réseaux sociaux -->
+<meta property="og:title" content="Politique de confidentialité | DYS-Positif">
+<!-- Définir le titre à afficher sur les réseaux sociaux lors du partage de la page -->
+<meta property="og:description" content="La politique de confidentialité DYS-POSITIF précise l’usage, la conservation et la protection des données personnelles collectées.">
+<!-- Fournir une description qui sera utilisée lors du partage sur des plateformes sociales -->
+<meta property="og:type" content="website">
+<!-- Spécifier le type de contenu (ici, un site web) pour les plateformes utilisant Open Graph -->
+<meta property="og:url" content="https://www.dys-positif.fr/politique-confidentialite.html">
+<!-- Indiquer l'URL canonique de la page pour qu'elle soit correctement identifiée lors du partage -->
+<meta property="og:image" content="https://www.dys-positif.fr/images/og-cover.jpg">
+<!-- Définir l'image d'aperçu qui s'affichera lors du partage de la page sur les réseaux sociaux -->
+
+<!-- Twitter Card : ces balises permettent de contrôler l'affichage de la page sur Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<!-- Choisir une carte Twitter avec une grande image pour une meilleure visibilité -->
+<meta name="twitter:title" content="Politique de confidentialité | DYS-Positif">
+<!-- Définir le titre de la page qui apparaîtra dans la Twitter Card -->
+<meta name="twitter:description" content="Politique de confidentialité du site DYS-POSITIF : données collectées, durée de conservation, droits des utilisateurs et contacts.">
+<!-- Fournir une description pour l'aperçu de la page sur Twitter -->
+<meta name="twitter:image" content="https://www.dys-positif.fr/images/og-cover.jpg">
+<!-- Définir l'image qui sera utilisée dans la Twitter Card -->
+
+<!-- Favicon : définir l'icône qui apparaît dans l'onglet du navigateur et dans les favoris -->
+<link rel="icon" href="../images/logo.png" type="image/x-icon">
+
+<!-- Définir le titre de la page, qui s'affiche dans l'onglet du navigateur -->
+<title>Politique de confidentialité | DYS-Positif</title>
+
+<!-- Feuille de styles : lier le fichier CSS contenant les règles de mise en forme du site -->
+<link rel="stylesheet" href="../css/styles3.css">
+
+
+</head>
+
+<body>
+
+  <!-- Bouton pour basculer entre le mode sombre et le mode clair -->
+  <button id="modeToggle" onclick="toggleDarkMode()" style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 10px 20px; background: #002244; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+    Mode Sombre
+  </button>
+
+  <main class="container py-5">
+
+    <h1>Politique de confidentialité</h1>
+
+    <p>
+      L'<strong>Association DYS-POSITF</strong> s'engage à respecter votre vie privée.
+    </p>
+
+    <p>
+      <strong>Données collectées :</strong> nom complet, adresse mail, informations pédagogiques, navigation.
+    </p>
+
+    <p>
+      <strong>Utilisation :</strong> gestion des services, statistiques, obligations légales.
+    </p>
+
+    <p>
+      <strong>Durée de conservation :</strong> 3 à 5 ans selon le type de données.
+    </p>
+
+    <p>
+      <strong>Vos droits :</strong> accès, rectification, suppression, opposition, conformément au RGPD.
+    </p>
+
+    <p>
+      <strong>Contact :</strong> <a href="mailto:contact@dys-positif.fr">contact@dys-positif.fr</a>
+    </p>
+
+    <p>
+      <strong>Protection des données des enfants :</strong> les données sont traitées avec autorisation parentale explicite.
+    </p>
+
+  </main>
+
+  <footer>
+
+    <div class="container text-center">
+
+      <p style="text-align: center;">&copy; 2025 Association DYS-POSITF. Tous droits réservés.</p>
+
+      <div class="footer-links">
+
+        <a href="mentions-legales.html">Mentions légales</a>
+
+        <a href="politique-confidentialite.html">Confidentialité</a>
+
+        <a href="politique-cookies.html">Cookies</a>
+
+        <a href="cgu.html">Conditions d'utilisation</a>
+
+        <a href="politique-enfants.html">Données des enfants</a>
+
+        <a href="politique-securite.html">Sécurité</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+<!-- Script JavaScript pour basculer entre le mode sombre et le mode clair -->
+<script>
+  // Définir la fonction 'toggleDarkMode' qui permettra de basculer 
+  // entre le mode sombre et le mode clair
+  function toggleDarkMode() {
+
+  // Bascule la classe "dark-mode" sur l'élément <html> pour changer l'apparence globale du site
+  document.documentElement.classList.toggle('dark-mode');
+
+  // Récupère l'élément bouton ayant l'ID 'modeToggle' afin de pouvoir modifier son texte
+  let btn = document.getElementById('modeToggle');
+
+  // Vérifie si l'élément <html> possède la classe "dark-mode" pour déterminer le mode actuellement activé
+  if (document.documentElement.classList.contains('dark-mode')) {
+
+   // Si la classe "dark-mode" est présente, modifie le texte du bouton pour indiquer "Mode Clair"
+   btn.innerText = 'Mode Clair';
+
+  } else {
+
+    // Sinon, modifie le texte du bouton pour indiquer "Mode Sombre"
+    btn.innerText = 'Mode Sombre';
+
+  }
+}
+
+</script>
+
+
+</body>
+
+</html>

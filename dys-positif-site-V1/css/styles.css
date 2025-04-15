@@ -1,0 +1,1751 @@
+/* ==========+++++++++++++++++++ CSS PAGE D'ACCUEIL ++++++++++++++++++++========== */
+
+/* ========== FOND ET TYPOGRAPHIE GLOBAUX ========== */
+/* Appliquer des styles globaux à l'élément <body> */
+body {
+    /* Définir la police de caractères principale en utilisant 
+    'Poppins' avec une alternative sans-serif */
+    font-family: 'Poppins', sans-serif;
+    
+    /* Supprimer les marges par défaut afin que le contenu commence directement au bord */
+    margin: 0;
+    
+    /* Ajouter un padding de 20 pixels autour du contenu du body */
+    padding: 20px;
+    
+    /* Définir le fond de la page avec un dégradé linéaire orienté à 135 degrés 
+       entre deux couleurs de base (#f8f9fa et #e9ecef) */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    
+    /* Appliquer une animation nommée "gradientShift" qui dure 15 secondes, 
+    avec une transition douce (ease)
+       et qui se répète indéfiniment (infinite) pour créer un effet de fond animé */
+    animation: gradientShift 15s ease infinite;
+    
+    /* Appliquer une transition de 0.5 seconde sur le changement 
+    du background pour plus de fluidité */
+    transition: background 0.5s ease;
+}
+
+/* Définition de l'animation "gradientShift" qui modifie le fond 
+de la page à différents intervalles */
+@keyframes gradientShift {
+    /* À 0% de l'animation, le background affiche le dégradé initial */
+    0%   { background: linear-gradient(135deg, #f8f9fa, #e9ecef); }
+    
+    /* À 25% de l'animation, le background change vers un nouveau dégradé */
+    25%  { background: linear-gradient(135deg, #e0c3fc, #8ec5fc); }
+    
+    /* À 50% de l'animation, le background se modifie pour adopter un dégradé intermédiaire */
+    50%  { background: linear-gradient(135deg, #cfd9df, #e2ebf0); }
+    
+    /* À 75% de l'animation, le background revient à un dégradé similaire à celui utilisé à 25% */
+    75%  { background: linear-gradient(135deg, #e0c3fc, #8ec5fc); }
+    
+    /* À 100% de l'animation, le background revient au dégradé initial pour boucler l'animation */
+    100% { background: linear-gradient(135deg, #f8f9fa, #e9ecef); }
+}
+
+
+  /* ========== NAVIGATION AVEC EFFETS SUBLIMES ========== */
+  /* Appliquer une transition fluide pour le changement de couleur de fond de la barre de navigation */
+.navbar {
+    transition: background-color 0.5s ease; /* Transition sur 0.5s avec une fonction d'accélération "ease" */
+}
+
+/* Lorsque la souris survole la barre de navigation, 
+modifier son background pour le rendre légèrement opaque */
+.navbar:hover {
+    background-color: rgba(255,255,255,0.85); /* Couleur blanche avec 85% d'opacité */
+}
+
+/* Appliquer une transition fluide sur la transformation (rotation) 
+de l'image dans la barre de marque */
+.navbar-brand img {
+    transition: transform 0.5s ease; /* Transition de la transformation sur 0.5s avec "ease" */
+}
+
+/* Lorsque la souris survole l'image, effectuer une rotation complète de 360 degrés */
+.navbar-brand img:hover {
+    transform: rotate(360deg); /* Effectue une rotation de 360 degrés */
+}
+
+/* Définir la position relative sur les liens de navigation 
+et appliquer une transition fluide pour la couleur */
+.nav-link {
+    position: relative;  /* Permet le positionnement absolu des pseudo-éléments 
+                         par rapport au lien */
+    transition: color 0.3s ease; /* Transition de la couleur du lien sur 0.3s */
+}
+
+/* Créer un pseudo-élément ::after pour ajouter un effet de soulignement animé aux liens */
+.nav-link::after {
+    content: ''; /* Contenu vide pour le pseudo-élément */
+    position: absolute; /* Position absolue pour le positionnement par rapport au lien */
+    left: 0; /* Positionné au bord gauche du lien */
+    bottom: 0; /* Positionné en bas du lien */
+    width: 0; /* Largeur initiale de 0 pour l'animation de l'effet */
+    height: 2px; /* Hauteur de 2 pixels pour le soulignement */
+    background: linear-gradient(to right, #8e2de2, #4a00e0); /* Dégradé de couleurs pour l'effet visuel */
+    transition: width 0.3s ease; /* Transition fluide de la largeur sur 0.3s */
+}
+
+/* Lors du survol du lien, étendre la largeur du pseudo-élément à 100% 
+pour créer l'effet de soulignement complet */
+.nav-link:hover::after {
+    width: 100%; /* Étend le pseudo-élément à la largeur complète du lien */
+}
+
+/* Appliquer une transition fluide pour le fond et la transformation 
+sur le bouton de bascule (mode sombre) */
+#modeToggle {
+    transition: background-color 0.5s ease, transform 0.3s ease; /* Transition sur la couleur de fond et la transformation */
+}
+
+/* Lors du survol du bouton de bascule, le faire légèrement agrandir pour un effet interactif */
+#modeToggle:hover {
+    transform: scale(1.05); /* Augmente légèrement l'échelle du bouton */
+}
+
+
+  /* ========== HERO : VIDEO AVEC TEXTE OVERLAY ANIMÉ ========== */
+  /* Appliquer un filtre de luminosité sur la vidéo située 
+  dans un conteneur ayant les classes "container-fluid" et "position-relative" */
+.container-fluid.position-relative video {
+    /* Réduire la luminosité de la vidéo à 80% */
+    filter: brightness(0.8);
+}
+
+/* Appliquer une animation sur tout élément avec la classe 
+"position-absolute" à l'intérieur d'un conteneur avec les classes 
+"container-fluid" et "position-relative" */
+.container-fluid.position-relative .position-absolute {
+    /* Lancer l'animation "fadeInSlideDown" sur 2 secondes avec une transition fluide (ease)
+       et utiliser "forwards" pour conserver le style final de 
+       l'animation une fois celle-ci terminée */
+    animation: fadeInSlideDown 2s ease forwards;
+}
+
+/* Définir l'animation "fadeInSlideDown" */
+@keyframes fadeInSlideDown {
+    /* Début de l'animation : l'élément est transparent et décalé de 50px vers le haut */
+    from {
+        opacity: 0;                     /* L'élément est totalement transparent */
+        transform: translateY(-50px);    /* L'élément est décalé de 50px vers le haut */
+    }
+    /* Fin de l'animation : l'élément devient opaque et retrouve sa position d'origine */
+    to {
+        opacity: 1;                     /* L'élément devient complètement opaque */
+        transform: translateY(0);       /* L'élément retourne à sa position initiale */
+    }
+}
+
+
+  /* ========== SECTIONS ET ARTICLES ========== */
+  /* 
+===============================================
+Styles et animations pour l'apparition du contenu
+===============================================
+*/
+
+/* Applique l'animation "contentAppear" à toute section avec la classe "container"
+   qui se trouve à l'intérieur d'un élément <main>.
+   L'animation dure 1.5 secondes avec une accélération "ease-out" 
+   pour un effet de fin de transition douce.
+*/
+main section.container {
+    animation: contentAppear 1.5s ease-out;
+}
+
+/* 
+Définition de l'animation "contentAppear"
+Cette animation fait apparaître le contenu en modifiant progressivement 
+l'opacité et la position verticale.
+*/
+@keyframes contentAppear {
+    /* Début de l'animation : le contenu est transparent (opacity: 0)
+       et décalé de 20 pixels vers le bas (translateY(20px)) */
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    /* Fin de l'animation : le contenu devient entièrement opaque (opacity: 1)
+       et revient à sa position d'origine (translateY(0)) */
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* 
+===============================================
+Styles et animations pour les titres d'articles (article h2)
+===============================================
+*/
+
+/* 
+Définition du style pour les titres h2 à l'intérieur d'un article.
+- La taille de la police est fixée à 2rem.
+- Le titre affiche un fond dégradé à 45 degrés allant du violet (#4a00e0) au bleu (#8e2de2).
+- La propriété -webkit-background-clip permet de "clipper" (limiter) le fond au texte.
+- -webkit-text-fill-color: transparent rend le texte transparent pour laisser 
+   transparaître le dégradé.
+- La règle background-clip: text permet d'obtenir le même effet sur certains navigateurs.
+- Une animation "textPulse" est appliquée sur le titre, qui se répète 
+  à l'infini toutes les 2 secondes.
+*/
+article h2 {
+    font-size: 2rem;
+    background: linear-gradient(45deg, #4a00e0, #8e2de2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textPulse 2s infinite;
+}
+
+/* 
+Définition de l'animation "textPulse" pour le titre.
+Cette animation modifie l'ombre portée du texte pour créer un effet de pulsation.
+*/
+@keyframes textPulse {
+    /* Au début (0%) et à la fin (100%) de l'animation, 
+       l'ombre portée est de 10px avec une opacité de 0.8 */
+    0%, 100% { 
+        text-shadow: 0 0 10px rgba(74,0,224,0.8); 
+    }
+    /* À 50% de l'animation, l'ombre portée s'intensifie à 20px avec une opacité de 1 */
+    50% { 
+        text-shadow: 0 0 20px rgba(74,0,224,1); 
+    }
+}
+
+/* 
+===============================================
+Styles pour les paragraphes dans les articles
+===============================================
+*/
+
+/* 
+Définit le style des paragraphes à l'intérieur des articles.
+- La taille de la police est de 1.1rem.
+- La hauteur de ligne est fixée à 1.6 pour une bonne lisibilité.
+- La couleur du texte est initialement gris foncé (#333).
+- Une transition douce de 0.3s est appliquée pour le changement de couleur lors du survol.
+*/
+article p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* 
+Lors du survol d'un paragraphe, la couleur du texte change pour un violet (#4a00e0).
+*/
+article p:hover {
+    color: #4a00e0;
+}
+
+/* 
+===============================================
+Styles pour le bouton primaire (.btn-primary)
+===============================================
+*/
+
+/* 
+Style de base pour les boutons ayant la classe "btn-primary".
+- Le fond affiche un dégradé linéaire à 45 degrés allant du violet au bleu.
+- La bordure est supprimée pour un style épuré.
+- Une transition est appliquée à la fois sur 
+  la transformation et sur l'ombre portée, sur 0.3s pour créer des effets interactifs.
+*/
+.btn-primary {
+    background: linear-gradient(45deg, #4a00e0, #8e2de2);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 
+Lors du survol du bouton primaire, 
+- Le bouton est légèrement déplacé vers le haut (-3px) et agrandi de 3% (scale(1.03)).
+- Une ombre portée (box-shadow) est ajoutée pour renforcer l'effet interactif.
+*/
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+  /* ========== COLONNE VIDEO & COMPTE A REBOURS ========== */
+  /* Sélectionner toutes les images contenues dans l'élément ayant l'ID "videoContainer" */
+#videoContainer img {
+    /* Appliquer une transition fluide de 0.3 secondes 
+       pour toute transformation effectuée sur l'image */
+    transition: transform 0.3s ease;
+    /* Modifier le curseur en "pointer" pour indiquer que l'image est cliquable */
+    cursor: pointer;
+}
+
+/* Appliquer un effet lorsque la souris survole l'image dans "videoContainer" */
+#videoContainer img:hover {
+    /* Agrandir l'image de 5% pour créer un effet de zoom lors du survol */
+    transform: scale(1.05);
+}
+
+/* Sélectionner l'élément avec l'ID "countdown" */
+#countdown {
+    /* Définir la taille de la police à 1.5rem pour une bonne lisibilité */
+    font-size: 1.5rem;
+    /* Mettre le texte en gras */
+    font-weight: bold;
+    /* Transformer le texte en majuscules pour un style uniforme */
+    text-transform: uppercase;
+    /* Appliquer l'animation "pulseCountdown" qui dure 2 secondes et se répète indéfiniment */
+    animation: pulseCountdown 2s infinite;
+}
+
+/* Définition de l'animation "pulseCountdown" */
+@keyframes pulseCountdown {
+    /* Au début (0%) et à la fin (100%) de l'animation, l'élément conserve sa taille normale */
+    0%, 100% { 
+        transform: scale(1);
+    }
+    /* À 50% de l'animation, l'élément est agrandi de 10% pour créer un effet de pulsation */
+    50% { 
+        transform: scale(1.1);
+    }
+}
+
+  /* ========== FOOTER ========== */
+  /* Applique les styles pour l'élément <footer> */
+footer {
+    /* Fond dégradé linéaire à 45 degrés allant du violet (#4a00e0) au bleu (#8e2de2) */
+    background: linear-gradient(45deg, #4a00e0, #8e2de2);
+    
+    /* Couleur du texte en blanc */
+    color: #fff;
+    
+    /* Padding vertical de 20px pour ajouter de l'espace en haut et en bas */
+    padding: 20px 0;
+    
+    /* Centre le texte horizontalement dans le footer */
+    text-align: center;
+    
+    /* Applique l'animation "fadeInUp" pendant 1 seconde avec une courbe d'accélération "ease" */
+    animation: fadeInUp 1s ease;
+}
+
+/* Définition de l'animation "fadeInUp" */
+@keyframes fadeInUp {
+    /* Début de l'animation (état initial) : 
+    le footer est transparent et décalé vers le bas de 20px */
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    /* Fin de l'animation (état final) : le footer devient 
+      complètement opaque et retourne à sa position normale */
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+  /* ========== MODALS AVEC ANIMATION D'APPARITION ========== */
+  /* Sélectionne tous les éléments ayant la classe "modal-content" */
+.modal-content {
+    /* Applique l'animation "modalZoom" sur 0.5 secondes avec une accélération "ease-out"
+       Ce type d'accélération permet un démarrage rapide suivi d'un ralentissement progressif */
+    animation: modalZoom 0.5s ease-out;
+}
+
+/* Définition de l'animation "modalZoom" qui sera utilisée pour animer les modals */
+@keyframes modalZoom {
+    /* État initial de l'animation */
+    from { 
+        /* L'élément est réduit à 80% de sa taille normale */
+        transform: scale(0.8); 
+        /* Et est complètement transparent (0% d'opacité) */
+        opacity: 0; 
+    }
+    /* État final de l'animation */
+    to { 
+        /* L'élément retrouve sa taille normale (100%) */
+        transform: scale(1); 
+        /* Et devient pleinement opaque (100% d'opacité) */
+        opacity: 1; 
+    }
+}
+
+
+  /* ========== EFFETS INTERACTIFS DIVERS SUR LES ÉLÉMENTS ========== */
+  /* Appliquer une transition CSS sur les images avec la classe "img-fluid"
+   pour toute transformation, sur une durée de 0.3 secondes avec une courbe d'accélération "ease" */
+img.img-fluid {
+    transition: transform 0.3s ease;
+}
+
+/* Lors du survol d'une image avec la classe "img-fluid",
+   décaler l'image vers le haut de 5 pixels pour créer un effet de décalage */
+img.img-fluid:hover {
+    transform: translateY(-5px);
+}
+
+/* Appliquer une transition CSS sur les éléments <article> et <section>
+   pour toute transformation, avec une durée de 0.3 secondes et une courbe d'accélération "ease" */
+article, section {
+    transition: transform 0.3s ease;
+}
+
+/* Lors du survol des éléments <article> et <section>,
+   décaler chacun de ces éléments vers le haut de 3 pixels pour un effet interactif subtil */
+article:hover, section:hover {
+    transform: translateY(-3px);
+}
+
+
+  /* ========== DARK MODE : S'assurer qu'il l'emporte sur les autres styles ========== */
+  /* Appliquer les styles pour le mode sombre sur l'élément <body> */
+body.dark-mode {
+    /* Définir le fond sombre */
+    background: #121212 !important;
+    /* Définir la couleur du texte en blanc cassé */
+    color: #f8f9fa !important;
+    /* Appliquer une transition de 0.5s sur le fond lors d'un changement, pour un effet fluide */
+    transition: background 0.5s ease !important;
+}
+
+/* Appliquer les styles pour les éléments de navigation, 
+   les conteneurs et le pied de page quand le mode sombre est activé */
+body.dark-mode .navbar,
+body.dark-mode .container,
+body.dark-mode footer {
+    /* Définir un fond sombre pour ces éléments */
+    background: #121212 !important;
+    /* Définir la couleur du texte en blanc cassé */
+    color: #f8f9fa !important;
+}
+
+/* Appliquer une couleur de texte claire aux liens, 
+   paragraphes et éléments de navigation en mode sombre */
+body.dark-mode a,
+body.dark-mode p,
+body.dark-mode .nav-link {
+    /* Assurer que le texte est affiché en blanc cassé */
+    color: #f8f9fa !important;
+}
+
+/* Pour le contenu des modals en mode sombre */
+body.dark-mode .modal-content {
+    /* Définir un fond gris foncé pour le contenu des modals */
+    background-color: #343a40 !important;
+    /* Définir la couleur du texte en blanc cassé dans le modal */
+    color: #f8f9fa !important;
+}
+
+/* Pour les en-têtes et pieds de page des modals en mode sombre */
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    /* Définir la couleur des bordures pour ces éléments */
+    border-color: #454d55 !important;
+}
+
+/* Pour le bouton de fermeture des modals en mode sombre */
+body.dark-mode .btn-close {
+    /* Appliquer un filtre qui inverse les couleurs pour rendre le bouton de fermeture visible */
+    filter: invert(1) !important;
+}
+
+  /* ========================
+   Scrollbar en Mode Clair
+   ======================== */
+
+/* Pour Chrome, Safari, Edge, etc. */
+/* 
+==================================================================================
+Styles personnalisés pour la barre de défilement (scrollbar) en mode clair 
+(uniquement lorsque l'élément <html> n'a PAS la classe "dark-mode")
+==================================================================================
+*/
+
+/* 
+Cibler l'élément scrollbar pour les navigateurs WebKit (Chrome, Safari, Edge, etc.)
+et définir sa largeur à 12px pour un aspect fin et élégant.
+*/
+html:not(.dark-mode)::-webkit-scrollbar {
+    width: 12px !important;
+  }
+  
+  /* 
+  Cibler la piste du scrollbar (la zone de fond sur laquelle se déplace le pouce) 
+  et définir un fond en dégradé allant du gris clair au blanc, avec des bordures arrondies.
+  */
+  html:not(.dark-mode)::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #e0e0e0, #fafafa) !important;
+    border-radius: 6px !important;
+  }
+  
+  /* 
+  Cibler le "pouce" (thumb) du scrollbar (la partie qui se déplace pour faire défiler)
+  et appliquer les styles suivants :
+  - Une couleur de fond violette (#8e2de2)
+  - Des coins arrondis (6px)
+  - Une bordure transparente de 2px pour créer un effet d'espace interne
+  - L'utilisation de "background-clip: content-box" pour que le fond ne déborde pas de la bordure
+  */
+  html:not(.dark-mode)::-webkit-scrollbar-thumb {
+    background: #8e2de2 !important;
+    border-radius: 6px !important;
+    border: 2px solid transparent !important;
+    background-clip: content-box !important;
+  }
+  
+  /* 
+  Lorsqu'on survole le pouce du scrollbar, changer sa couleur pour un violet plus foncé (#4a00e0)
+  afin de fournir un retour visuel à l'utilisateur.
+  */
+  html:not(.dark-mode)::-webkit-scrollbar-thumb:hover {
+    background: #4a00e0 !important;
+  }
+  
+  /* 
+  ----------------------------------------------------------------------------------
+  Styles de la barre de défilement pour Firefox en mode clair
+  ----------------------------------------------------------------------------------
+  Ici, on utilise les propriétés spécifiques à Firefox pour définir :
+  - Une largeur fine (thin)
+  - La couleur du pouce en violet (#8e2de2) et un fond transparent pour la piste.
+  */
+  html:not(.dark-mode) {
+    scrollbar-width: thin !important;
+    scrollbar-color: #8e2de2 transparent !important;
+  }
+  
+/* ==========+++++++++++++++++++ CSS PAGE D'ACCUEIL ++++++++++++++++++++========== */
+
+
+
+
+
+
+
+/* ==========+++++++++++++++++++ CSS PAGE ATELIERS ++++++++++++++++++++========== */
+
+/* ========== NAVIGATION AVEC EFFETS SUBLIMES ========== */
+/* Appliquer une transition fluide pour la couleur de fond de la barre de navigation */
+.navbar {
+    transition: background-color 0.5s ease; /* 0.5 secondes de transition avec une fonction de timing "ease" */
+}
+
+/* Lors du survol de la barre de navigation, 
+modifier la couleur de fond pour la rendre légèrement opaque */
+.navbar:hover {
+    background-color: rgba(255,255,255,0.85); /* Fond blanc avec 85% d'opacité */
+}
+
+/* Appliquer une transition fluide sur la transformation de l'image 
+  présente dans la barre de marque */
+.navbar-brand img {
+    transition: transform 0.5s ease; /* La transformation prendra 0.5 secondes avec "ease" */
+}
+
+/* Lors du survol de l'image de la barre de marque, 
+   effectuer une rotation complète de 360 degrés */
+.navbar-brand img:hover {
+    transform: rotate(360deg); /* Rotation de l'image de 360° */
+}
+
+/* Définir la position relative pour les liens de navigation, 
+   permettant le positionnement de leurs pseudo-éléments */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease; /* Appliquer une transition sur la couleur du texte sur 0.3 secondes */
+}
+
+/* Créer un pseudo-élément ::after pour ajouter un effet de soulignement animé aux liens */
+.nav-link::after {
+    content: ''; /* Pas de contenu, juste pour l'effet visuel */
+    position: absolute; /* Position absolue, par rapport à l'élément parent (.nav-link) */
+    left: 0; /* Commence à l'extrémité gauche du lien */
+    bottom: 0; /* Positionné en bas du lien */
+    width: 0; /* Largeur initiale nulle pour l'animation */
+    height: 2px; /* Hauteur fixe de 2 pixels pour le soulignement */
+    background: linear-gradient(to right, #8e2de2, #4a00e0); /* Dégradé de couleur du violet vers le bleu */
+    transition: width 0.3s ease; /* Transition de la largeur sur 0.3 secondes */
+}
+
+/* Lors du survol du lien, étendre le pseudo-élément ::after à 100% de la largeur du lien */
+.nav-link:hover::after {
+    width: 100%; /* Soulignement complet du lien */
+}
+
+/* Appliquer des transitions sur le bouton de bascule du mode sombre 
+pour la couleur de fond et la transformation */
+#modeToggle {
+    transition: background-color 0.5s ease, transform 0.3s ease; /* Deux transitions : l'une pour la couleur, l'autre pour l'échelle */
+}
+
+/* Lors du survol du bouton de bascule, augmenter légèrement sa taille pour un effet interactif */
+#modeToggle:hover {
+    transform: scale(1.05); /* Agrandissement de 5% de la taille du bouton */
+}
+
+  /* ================================
+   CSS ÉPOUSTOUFLANT – Section Ateliers & Footer
+   ================================ */
+
+/* =====================================================
+   Styles généraux pour la section ateliers
+   ===================================================== */
+/* Sélectionne toute section avec la classe "container" à l'intérieur de l'élément <main> */
+main section.container {
+    /* Ajoute un espacement intérieur de 3rem pour un contenu bien aéré */
+    padding: 3rem;
+    /* Définit un fond en dégradé linéaire orienté à 135 degrés 
+    du gris clair (#f0f0f0) au gris moyen (#e0e0e0) */
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    /* Arrondit les coins du conteneur avec un rayon de 10px */
+    border-radius: 10px;
+    /* Ajoute une ombre portée légère pour donner de la profondeur 
+    (décalage de 4px, flou de 8px, opacité 10%) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Applique l'animation "fadeIn" sur 1.2s avec une courbe d'accélération "ease-out" */
+    animation: fadeIn 1.2s ease-out;
+    /* Ajoute une transition de 0.5s pour le changement de background 
+    pour que la modification se fasse en douceur */
+    transition: background 0.5s ease;
+  }
+  
+  /* Définition de l'animation "fadeIn" qui fait apparaître le contenu en douceur */
+  @keyframes fadeIn {
+    /* État initial : le contenu est totalement transparent et décalé de 20px vers le bas */
+    from { 
+      opacity: 0; 
+      transform: translateY(20px); 
+    }
+    /* État final : le contenu devient pleinement opaque et retrouve sa position initiale */
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  /* =====================================================
+     Style du titre de la section dans l'atelier
+     ===================================================== */
+  /* Applique des styles au titre <h1> qui se trouve dans la section container */
+  main section.container h1 {
+    /* Utilise la police 'Montserrat' avec une alternative sans-serif */
+    font-family: 'Montserrat', sans-serif;
+    /* Applique un poids de police élevé (700) */
+    font-weight: 700;
+    /* Transforme le texte en majuscules */
+    text-transform: uppercase;
+    /* Ajoute un espacement entre les lettres */
+    letter-spacing: 1px;
+    /* Définit la couleur du texte en gris foncé (#333) */
+    color: #333;
+    /* Ajoute une bordure inférieure de 3px avec un dégradé violet (#8e2de2) */
+    border-bottom: 3px solid #8e2de2;
+    /* Affiche le titre en mode inline-block pour que la bordure s'ajuste à la largeur du texte */
+    display: inline-block;
+    /* Ajoute un espacement intérieur en bas de 0.5rem pour 
+    que le texte ne soit pas collé à la bordure */
+    padding-bottom: 0.5rem;
+    /* Ajoute une marge inférieure de 1.5rem pour séparer le titre du contenu suivant */
+    margin-bottom: 1.5rem;
+    /* Applique une transition sur la couleur du texte et 
+    la couleur de la bordure sur 0.5s pour des changements en douceur */
+    transition: color 0.5s ease, border-color 0.5s ease;
+  }
+  
+  /* =====================================================
+     Adaptation de la section au mode sombre
+     ===================================================== */
+  /* Quand le body a la classe "dark-mode", modifier le style de la section container */
+  body.dark-mode main section.container {
+    /* Change le fond en un dégradé plus sombre, 
+    du gris très foncé (#333) au gris de fond (#222) */
+    background: linear-gradient(135deg, #333, #222);
+    /* Augmente l'intensité de l'ombre portée (opacité 60% au lieu de 10%) 
+    pour renforcer l'effet sombre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Adaptation du titre dans le mode sombre */
+  body.dark-mode main section.container h1 {
+    /* Change la couleur du texte du titre en blanc cassé */
+    color: #f8f9fa;
+    /* Change la couleur de la bordure inférieure à un bleu plus doux (#4a00e0) */
+    border-bottom-color: #4a00e0;
+  }
+  
+  /* =====================================================
+     Personnalisation des cartes (cards)
+     ===================================================== */
+  /* Style de base pour les éléments avec la classe "card" */
+  .card {
+    /* Retirer les bordures par défaut */
+    border: none;
+    /* Arrondir les coins des cartes avec un rayon de 12px */
+    border-radius: 12px;
+    /* Assurer que le contenu ne déborde pas des cartes */
+    overflow: hidden;
+    /* Ajouter une ombre légère à la carte (opacité 12%) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    /* Ajouter une transition sur la transformation et 
+    l'ombre portée sur 0.3s pour des effets interactifs */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Effet interactif lorsque l'utilisateur survole la carte */
+  .card:hover {
+    /* Décale la carte vers le haut de 8px */
+    transform: translateY(-8px);
+    /* Augmente l'ombre portée pour un effet plus marqué (opacité 25%) */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* =====================================================
+     Effet de survol pour l'image de la carte
+     ===================================================== */
+  /* Appliquer une transition sur les images avec la classe "card-img-top" */
+  .card-img-top {
+    transition: transform 0.5s ease;
+  }
+  /* Lors du survol de la carte, appliquer un effet de zoom sur l'image */
+  .card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+  
+  /* =====================================================
+     Styles pour le corps de la carte (card-body)
+     ===================================================== */
+  /* Style de base pour le corps des cartes */
+  .card-body {
+    /* Fond blanc avec une légère transparence (90%) */
+    background: rgba(255, 255, 255, 0.9);
+    /* Ajoute un espacement intérieur de 1.5rem */
+    padding: 1.5rem;
+    /* Applique une transition sur le fond et la transformation sur 0.4s pour des effets lisses */
+    transition: background 0.4s ease, transform 0.4s ease;
+  }
+  /* Effet lors du survol de la carte pour le corps de la carte */
+  .card:hover .card-body {
+    /* Décale le contenu du corps de 3px vers le haut */
+    transform: translateY(-3px);
+  }
+  
+  /* Adaptation du corps de la carte en mode sombre */
+  body.dark-mode .card-body {
+    /* Change le fond pour un gris très foncé avec 80% d'opacité */
+    background: rgba(20, 20, 20, 0.8);
+  }
+  
+  /* =====================================================
+     Styles pour les titres et textes dans les cartes
+     ===================================================== */
+  /* Style pour le titre de la carte */
+  .card-title {
+    /* Utilise la police 'Montserrat', sans-serif */
+    font-family: 'Montserrat', sans-serif;
+    /* Applique un poids de police modéré (600) */
+    font-weight: 600;
+    /* Ajoute une marge inférieure de 0.5rem */
+    margin-bottom: 0.5rem;
+    /* Applique une transition sur la couleur sur 0.4s */
+    transition: color 0.4s ease;
+  }
+  
+  /* Style pour le texte descriptif dans la carte */
+  .card-text {
+    /* Utilise la police 'Roboto', sans-serif */
+    font-family: 'Roboto', sans-serif;
+    /* Définit une hauteur de ligne pour améliorer la lisibilité */
+    line-height: 1.6;
+    /* Ajoute une transition pour le changement de couleur sur 0.4s */
+    transition: color 0.4s ease;
+  }
+  
+  /* =====================================================
+     Ajustements pour les badges
+     ===================================================== */
+  /* Style de base pour les badges utilisés dans les cartes */
+  .badge {
+    /* Définit une taille de police légèrement réduite */
+    font-size: 0.9rem;
+    /* Ajoute un léger espacement entre les lettres */
+    letter-spacing: 0.4px;
+    /* Applique une transition sur le fond sur 0.4s */
+    transition: background 0.4s ease;
+  }
+  
+  /* Classe pour personnaliser la couleur du texte en harmonie 
+  avec la couleur "warning" de Bootstrap */
+  .text-warning-custom {
+    color: #212529; /* Gris foncé pour un bon contraste avec le fond warning (#ffc107) */
+  }
+  
+  /* =====================================================
+     Styles pour le Footer
+     ===================================================== */
+  /* Style de base pour le footer */
+  footer {
+    /* Applique un fond en dégradé linéaire à 135 degrés du gris clair 
+    (#f0f0f0) au gris moyen (#e0e0e0) */
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    /* Ajoute un padding vertical de 2rem */
+    padding: 2rem 0;
+    /* Ajoute une marge supérieure de 3rem pour séparer le footer du contenu */
+    margin-top: 3rem;
+    /* Applique une transition fluide sur le fond sur 0.5s */
+    transition: background 0.5s ease;
+  }
+  
+  /* Style des paragraphes dans le footer */
+  footer p {
+    /* Utilise la police 'Roboto', sans-serif */
+    font-family: 'Roboto', sans-serif;
+    /* Définit une taille de texte de 0.9rem */
+    font-size: 0.9rem;
+    /* Couleur du texte en gris moyen (#555) */
+    color: #555;
+    /* Transition sur la couleur du texte sur 0.5s */
+    transition: color 0.5s ease;
+    /* Retire les marges par défaut */
+    margin: 0;
+    /* Ajoute un léger effet d'ombre sur le texte pour plus de profondeur */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  /* =====================================================
+     Adaptation du Footer en mode sombre
+     ===================================================== */
+  /* Lorsqu'en mode sombre, modifier le fond du footer */
+  body.dark-mode footer {
+    /* Utilise un dégradé plus sombre allant du gris foncé (#222) au gris moyen (#333) */
+    background: linear-gradient(135deg, #222, #333);
+  }
+  /* Adapter la couleur des paragraphes dans le footer pour le mode sombre */
+  body.dark-mode footer p {
+    /* Change la couleur en un gris très clair (#ddd) */
+    color: #ddd;
+    /* Supprime l'ombre portée sur le texte en mode sombre */
+    text-shadow: none;
+  }
+  
+  /* =====================================================
+     Animation pour les cartes (Effet zoomIn)
+     ===================================================== */
+  /* Définir l'animation "zoomIn" pour faire apparaître les cartes de manière animée */
+  @keyframes zoomIn {
+    /* Commencer l'animation avec l'élément légèrement réduit et transparent */
+    from { 
+      opacity: 0; 
+      transform: scale(0.95); 
+    }
+    /* Terminer l'animation avec l'élément à sa taille normale et entièrement opaque */
+    to { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+  }
+  
+  /* Appliquer l'animation "zoomIn" sur les éléments avec la classe "card" */
+  .card {
+    animation: zoomIn 0.5s ease forwards;
+  }
+  
+  /* =====================================================
+     Responsive – Ajustements pour les écrans plus petits
+     ===================================================== */
+  @media (max-width: 768px) {
+    /* Réduire la taille du titre de la section pour les écrans de moins de 768px */
+    main section.container h1 {
+      font-size: 1.75rem;
+    }
+    /* Réduire le padding du corps de la carte pour les petits écrans */
+    .card-body {
+      padding: 1rem;
+    }
+    /* Réduire le padding du footer pour une meilleure adaptation aux écrans étroits */
+    footer {
+      padding: 1.5rem 0;
+    }
+  }
+  
+  /* =====================================================
+     Dark Mode : Application prioritaire des styles pour le mode sombre
+     ===================================================== */
+  /* Pour le body en mode sombre, forcer le fond et la couleur du texte */
+  body.dark-mode {
+    background: #121212 !important;
+    color: #f8f9fa !important;
+    transition: background 0.5s ease !important;
+  }
+  
+  /* Pour les éléments navbar, container et footer en mode sombre */
+  body.dark-mode .navbar,
+  body.dark-mode .container,
+  body.dark-mode footer {
+    background: #121212 !important;
+    color: #f8f9fa !important;
+  }
+  
+  /* Pour les liens, paragraphes, titres h2 et éléments nav-link en mode sombre */
+  body.dark-mode a,
+  body.dark-mode p,
+  body.dark-mode h2,
+  body.dark-mode .nav-link {
+    color: #f8f9fa !important;
+  }
+  
+  /* Pour le contenu des modals en mode sombre */
+  body.dark-mode .modal-content {
+    background-color: #343a40 !important;
+    color: #f8f9fa !important;
+  }
+  
+  /* Pour les en-têtes et pieds de modal en mode sombre */
+  body.dark-mode .modal-header,
+  body.dark-mode .modal-footer {
+    border-color: #454d55 !important;
+  }
+  
+  /* Pour le bouton de fermeture des modals en mode sombre */
+  body.dark-mode .btn-close {
+    filter: invert(1) !important;
+  }
+  
+  /* =====================================================
+     Scrollbar en mode clair (quand dark-mode n'est pas activé)
+     ===================================================== */
+  
+  /* Styles pour les navigateurs basés sur WebKit (Chrome, Safari, Edge) */
+  html:not(.dark-mode)::-webkit-scrollbar {
+    /* Définit la largeur de la barre de défilement à 12px */
+    width: 12px !important;
+  }
+  
+  html:not(.dark-mode)::-webkit-scrollbar-track {
+    /* Définir un fond en dégradé pour la piste du scrollbar */
+    background: linear-gradient(180deg, #e0e0e0, #fafafa) !important;
+    /* Arrondir les bords de la piste */
+    border-radius: 6px !important;
+  }
+  
+  html:not(.dark-mode)::-webkit-scrollbar-thumb {
+    /* Définir la couleur du "pouce" du scrollbar en violet (#8e2de2) */
+    background: #8e2de2 !important;
+    /* Arrondir les bords du pouce */
+    border-radius: 6px !important;
+    /* Ajouter une bordure transparente de 2px pour créer un effet de marge interne */
+    border: 2px solid transparent !important;
+    /* Utiliser background-clip pour s'assurer que la couleur reste à l'intérieur de la bordure */
+    background-clip: content-box !important;
+  }
+  
+  html:not(.dark-mode)::-webkit-scrollbar-thumb:hover {
+    /* Lors du survol du pouce, changer la couleur pour un violet plus foncé (#4a00e0) */
+    background: #4a00e0 !important;
+  }
+  
+  /* Styles spécifiques pour Firefox en mode clair */
+  html:not(.dark-mode) {
+    /* Utilise la largeur "thin" pour la scrollbar, ce qui la rend plus discrète */
+    scrollbar-width: thin !important;
+    /* Définit la couleur du pouce et de la piste : pouce en violet et piste transparente */
+    scrollbar-color: #8e2de2 transparent !important;
+  }
+  
+/* ==========+++++++++++++++++++ CSS PAGE ATELIERS ++++++++++++++++++++========== */
+
+
+
+
+
+
+
+/* ==========+++++++++++++++++++ CSS STATISTIQUES ET EQUIPE ++++++++++++++++++++========== */
+
+  /* ========== NAVIGATION AVEC EFFETS SUBLIMES ========== */
+/* Applique une transition fluide à la couleur de fond de la barre de navigation */
+.navbar {
+    transition: background-color 0.5s ease;
+}
+/* Change la couleur de fond quand la souris survole la barre de navigation */
+.navbar:hover {
+    background-color: rgba(255,255,255,0.85);
+}
+
+/* Applique une transition sur la transformation (rotation) de l'image de la marque */
+.navbar-brand img {
+    transition: transform 0.5s ease;
+}
+/* Lors du survol, effectue une rotation complète de 360° sur l'image de la marque */
+.navbar-brand img:hover {
+    transform: rotate(360deg);
+}
+
+/* Définit une position relative pour permettre le positionnement de pseudo-éléments sur les liens de navigation */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+/* Crée un effet de soulignement animé sous les liens en utilisant un pseudo-élément ::after */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* La largeur démarre à 0 pour créer un effet d'animation */
+    height: 2px;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    transition: width 0.3s ease; /* Transition de la largeur pour l'animation */
+}
+/* Étend le soulignement à toute la largeur du lien lors du survol */
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Applique des transitions pour la couleur de fond et la transformation du bouton de bascule */
+#modeToggle {
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+/* Lors du survol du bouton de bascule, l'agrandit légèrement (scale 1.05) */
+#modeToggle:hover {
+    transform: scale(1.05);
+}
+
+/* ========== DARK MODE : S'assurer qu'il l'emporte sur les autres styles ========== */
+/* Modifie le fond, la couleur du texte et la transition pour le mode sombre sur le body */
+body.dark-mode {
+    background: #121212 !important;
+    color: #f8f9fa !important;
+    transition: background 0.5s ease !important;
+}
+/* Pour le mode sombre, applique le fond sombre et la couleur claire aux éléments principaux comme la navbar, container et footer */
+body.dark-mode .navbar,
+body.dark-mode .container,
+body.dark-mode footer {
+    background: #121212 !important;
+    color: #f8f9fa !important;
+}
+/* Pour le mode sombre, force la couleur claire pour les liens, paragraphes et éléments de navigation */
+body.dark-mode a,
+body.dark-mode p,
+body.dark-mode .nav-link {
+    color: #f8f9fa !important;
+}
+/* Pour le mode sombre, ajuste l'apparence du contenu des modals */
+body.dark-mode .modal-content {
+    background-color: #343a40 !important;
+    color: #f8f9fa !important;
+}
+/* Ajuste la couleur des bordures pour l'en-tête et le pied de page des modals en mode sombre */
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    border-color: #454d55 !important;
+}
+/* Inverse les couleurs du bouton de fermeture des modals pour le rendre visible en mode sombre */
+body.dark-mode .btn-close {
+    filter: invert(1) !important;
+}
+
+/* ======================================
+   CSS ÉPOUSTOUFLANT – Statistiques & Équipe
+====================================== */
+/* Styles globaux pour la section principale des statistiques et de l'équipe */
+main section.container {
+    /* Ajoute un espacement intérieur de 3rem */
+    padding: 3rem;
+    /* Crée un fond dégradé linéaire orienté à 135° du gris très clair au gris clair */
+    background: linear-gradient(135deg, #fafafa, #f0f0f0);
+    /* Arrondit les coins du conteneur */
+    border-radius: 10px;
+    /* Ajoute une ombre légère pour la profondeur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Anime l'apparition du conteneur avec l'animation "fadeIn" sur 1.2s en accélération "ease-out" */
+    animation: fadeIn 1.2s ease-out;
+    /* Transition pour le fond afin que les changements se fassent en douceur */
+    transition: background 0.5s ease;
+}
+
+/* Définition de l'animation "fadeIn" qui fait apparaître le contenu progressivement */
+@keyframes fadeIn {
+    /* État initial : invisible et décalé de 20px vers le bas */
+    from { opacity: 0; transform: translateY(20px); }
+    /* État final : complètement visible et à la position originale */
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Styles pour les titres principaux et secondaires dans la section container */
+main section.container h1,
+main section.container h2 {
+    /* Utilise la police Montserrat en sans-serif */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    /* Transforme le texte en majuscules et ajoute un léger espacement entre les lettres */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* Définit une couleur de texte gris foncé */
+    color: #333;
+    /* Ajoute une marge inférieure pour espacer le titre du contenu suivant */
+    margin-bottom: 1.5rem;
+    /* Transition pour le changement de couleur sur 0.5s */
+    transition: color 0.5s ease;
+}
+
+/* Styles spécifiques pour le titre <h1> dans la section */
+main section.container h1 {
+    /* Ajoute une bordure inférieure de 3px en dégradé violet */
+    border-bottom: 3px solid #8e2de2;
+    /* Affiche le titre en inline-block pour que la bordure s'ajuste à la largeur du texte */
+    display: inline-block;
+    /* Ajoute du padding en bas pour espacer le texte de la bordure */
+    padding-bottom: 0.5rem;
+}
+
+/* Styles spécifiques pour le titre <h2> dans la section */
+main section.container h2 {
+    /* Ajoute une bordure à gauche de 4px en dégradé violet */
+    border-left: 4px solid #8e2de2;
+    /* Ajoute du padding à gauche pour espacer le texte de la bordure */
+    padding-left: 10px;
+}
+
+/* ===============================
+   Bloc Statistiques
+   =============================== */
+/* Cible les cartes de statistiques à l'intérieur d'une rangée centrée pour l'affichage */
+main section.container .row.text-center > .col-md-4 > div {
+    /* Ajoute une bordure épaisse avec une couleur violette */
+    border: 5px solid #8e2de2;
+    /* Arrondit les coins de la carte */
+    border-radius: 10px;
+    /* Ajoute un espacement intérieur de 2rem */
+    padding: 2rem;
+    /* Transition pour la transformation et l'ombre portée sur 0.3s */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation sur la carte de statistiques lors du survol */
+main section.container .row.text-center > .col-md-4 > div:hover {
+    /* Déplace la carte vers le haut de 8px */
+    transform: translateY(-8px);
+    /* Augmente l'ombre portée pour accentuer l'effet */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   Icones dans le Bloc Statistiques
+   =============================== */
+/* Cible les icônes à l'intérieur des colonnes centrées et applique une transition */
+main section.container .row.text-center i {
+    transition: transform 0.3s ease;
+}
+/* Lors du survol, l'icône s'agrandit légèrement pour un effet interactif */
+main section.container .row.text-center i:hover {
+    transform: scale(1.1);
+}
+
+/* ===============================
+   Carrousel de l'équipe
+   =============================== */
+/* Applique une transition sur les images dans chaque élément du carrousel de l'équipe */
+#equipeCarousel .carousel-item img {
+    transition: transform 0.5s ease;
+}
+/* Lorsque la souris survole une image du carrousel, elle s'agrandit légèrement */
+#equipeCarousel .carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Rend les icônes de contrôle (flèches) du carrousel visibles en mode clair */
+body:not(.dark-mode) .carousel-control-prev-icon,
+body:not(.dark-mode) .carousel-control-next-icon {
+    /* Définit un fond sombre semi-transparent pour les flèches */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Arrondit les icônes pour un look circulaire */
+    border-radius: 50%;
+    padding: 10px;
+    /* Ajuste la taille et la position de l'image de fond */
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ===============================
+   Légendes du carrousel
+   =============================== */
+/* Applique la police Montserrat aux légendes (titres et textes) du carrousel */
+.carousel-caption h5,
+.carousel-caption p {
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.5s ease;
+}
+
+/* ===============================
+   Témoignages Clients
+   =============================== */
+/* Style pour les citations dans le carrousel de témoignages */
+#temoignagesCarousel blockquote {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    transition: transform 0.3s ease;
+}
+/* Lors du survol d'une citation, elle s'agrandit légèrement */
+#temoignagesCarousel blockquote:hover {
+    transform: scale(1.03);
+}
+
+/* ===============================
+   Adaptation au Mode Sombre pour Statistiques & Équipe
+   =============================== */
+/* En mode sombre, modifie le fond de la section container */
+body.dark-mode main section.container {
+    background: linear-gradient(135deg, #333, #222);
+    /* Augmente l'opacité de l'ombre portée pour un effet plus marqué en mode sombre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+/* En mode sombre, change la couleur des titres */
+body.dark-mode main section.container h1,
+body.dark-mode main section.container h2 {
+    color: #f8f9fa;
+}
+/* En mode sombre, adapte la bordure inférieure du titre <h1> */
+body.dark-mode main section.container h1 {
+    border-bottom-color: #4a00e0;
+}
+/* En mode sombre, adapte la bordure gauche du titre <h2> */
+body.dark-mode main section.container h2 {
+    border-left-color: #4a00e0;
+}
+
+/* Adaptation pour les cartes de statistiques en mode sombre */
+body.dark-mode .row.text-center > .col-md-4 > div {
+    border-color: #4a00e0;
+}
+
+/* Adaptation pour les témoignages en mode sombre */
+body.dark-mode #temoignagesCarousel blockquote {
+    color: #f8f9fa;
+}
+
+/* ===============================
+   Responsive – Ajustements pour les petits écrans
+   =============================== */
+@media (max-width: 768px) {
+    /* Réduit la taille des titres pour les petits écrans */
+    main section.container h1,
+    main section.container h2 {
+        font-size: 1.75rem;
+    }
+    /* Réduit le padding du conteneur pour s'adapter aux écrans étroits */
+    main section.container {
+        padding: 2rem;
+    }
+    /* Diminue le padding dans les cartes des statistiques */
+    main section.container .row.text-center > .col-md-4 > div {
+        padding: 1.5rem;
+    }
+}
+
+/* ========================
+   Scrollbar en Mode Clair
+   ======================== */
+/* Applique des styles à la scrollbar pour les navigateurs WebKit en mode clair */
+html:not(.dark-mode)::-webkit-scrollbar {
+    width: 12px !important; /* Largeur de la scrollbar */
+}
+html:not(.dark-mode)::-webkit-scrollbar-track {
+    /* Piste de la scrollbar : fond en dégradé du gris clair au blanc */
+    background: linear-gradient(180deg, #e0e0e0, #fafafa) !important;
+    border-radius: 6px !important; /* Coins arrondis */
+}
+html:not(.dark-mode)::-webkit-scrollbar-thumb {
+    /* Pouce de la scrollbar avec une couleur violette */
+    background: #8e2de2 !important;
+    border-radius: 6px !important;
+    border: 2px solid transparent !important;
+    background-clip: content-box !important;
+}
+html:not(.dark-mode)::-webkit-scrollbar-thumb:hover {
+    /* Change la couleur du pouce lorsqu'il est survolé pour un effet interactif */
+    background: #4a00e0 !important;
+}
+
+/* Applique des styles spécifiques pour Firefox en mode clair */
+html:not(.dark-mode) {
+    /* Définit une largeur fine pour la scrollbar */
+    scrollbar-width: thin !important;
+    /* Déclare les couleurs pour le pouce et la piste de la scrollbar */
+    scrollbar-color: #8e2de2 transparent !important;
+}
+
+/* ==========+++++++++++++++++++ CSS STATISTIQUES ET EQUIPE ++++++++++++++++++++========== */
+
+
+
+
+
+
+
+
+/* ==========+++++++++++++++++++ CSS REALISATIONS ET CONTACT ++++++++++++++++++++========== */
+/* ========== NAVIGATION AVEC EFFETS SUBLIMES ========== */
+/* Transition fluide pour la couleur de fond de la navbar (0.5s, easing "ease") */
+.navbar {
+    transition: background-color 0.5s ease;
+}
+/* Changement du fond lors du survol de la navbar (blanc avec 85% d'opacité) */
+.navbar:hover {
+    background-color: rgba(255,255,255,0.85);
+}
+
+/* Transition de transformation pour l'image de la marque dans la navbar */
+.navbar-brand img {
+    transition: transform 0.5s ease;
+}
+/* Rotation complète (360°) de l'image au survol */
+.navbar-brand img:hover {
+    transform: rotate(360deg);
+}
+
+/* Positionnement relatif et transition de couleur pour les liens de navigation */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+/* Pseudo-élément ::after pour créer un soulignement animé sous le lien */
+.nav-link::after {
+    /* Définit le contenu du pseudo-élément comme vide */
+content: '';
+/* Positionne le pseudo-élément de manière absolue par rapport à son conteneur parent */
+position: absolute;
+/* Aligne le pseudo-élément sur le côté gauche de son conteneur */
+left: 0;
+/* Place le pseudo-élément en bas de son conteneur */
+bottom: 0;
+/* Définit une largeur initiale de 0 pour permettre un effet d'animation d'extension */
+width: 0; /* Largeur initiale nulle pour l'effet d'animation */
+/* Fixe la hauteur du pseudo-élément à 2px pour créer une ligne fine */
+height: 2px;
+/* Applique un fond en dégradé linéaire allant du violet (#8e2de2) au bleu (#4a00e0) */
+background: linear-gradient(to right, #8e2de2, #4a00e0);
+/* Définit une transition sur la largeur sur 0.3s avec une courbe d'accélération "ease"
+   pour animer l'extension du pseudo-élément de façon fluide */
+transition: width 0.3s ease;
+
+}
+/* À l'état de survol, le pseudo-élément s'étend sur la largeur complète du lien */
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Transition sur la couleur de fond et la transformation du bouton de bascule (mode sombre) */
+#modeToggle {
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+/* Agrandissement du bouton de bascule lors du survol (scale 1.05) */
+#modeToggle:hover {
+    transform: scale(1.05);
+}
+
+/* ========== DARK MODE : S'assurer qu'il l'emporte sur les autres styles ========== */
+/* Styles globaux pour le body en mode sombre */
+body.dark-mode {
+    background: #121212 !important;
+    color: #f8f9fa !important;
+    transition: background 0.5s ease !important;
+}
+/* Application du mode sombre aux principaux conteneurs (navbar, container, footer) */
+body.dark-mode .navbar,
+body.dark-mode .container,
+body.dark-mode footer {
+    background: #121212 !important;
+    color: #f8f9fa !important;
+}
+/* Mise à jour de la couleur des liens, paragraphes et éléments de navigation en mode sombre */
+body.dark-mode a,
+body.dark-mode p,
+body.dark-mode .nav-link {
+    color: #f8f9fa !important;
+}
+/* Styles pour le contenu des modals en mode sombre */
+body.dark-mode .modal-content {
+    background-color: #343a40 !important;
+    color: #f8f9fa !important;
+}
+/* Adaptation des bordures des en-têtes et pieds de modal en mode sombre */
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    border-color: #454d55 !important;
+}
+/* Inversion des couleurs pour le bouton de fermeture des modals en mode sombre */
+body.dark-mode .btn-close {
+    filter: invert(1) !important;
+}
+
+
+/* ======================================
+   CSS ÉPOUSTOUFLANT – Réalisations & Contact
+====================================== */
+/* Style global pour le conteneur principal de la section Réalisations & Contact */
+main section.container {
+    padding: 3rem;
+    background: linear-gradient(135deg, #fafafa, #f0f0f0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease-out;
+    transition: background 0.5s ease;
+}
+
+/* Animation d'apparition "fadeIn" pour le conteneur (transition de 20px vers 0 et opacité) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Styles pour les titres <h1> et <h2> dans le conteneur */
+main section.container h1,
+main section.container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    margin-bottom: 1.5rem;
+    transition: color 0.5s ease;
+}
+/* Style spécifique pour le titre <h1> : bordure inférieure, 
+display inline-block et padding en bas */
+main section.container h1 {
+    border-bottom: 3px solid #8e2de2;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+/* Style spécifique pour le titre <h2> : bordure gauche et padding à gauche */
+main section.container h2 {
+    border-left: 4px solid #8e2de2;
+    padding-left: 10px;
+}
+
+/* ===============================
+   Galerie de réalisations (Cartes)
+   =============================== */
+/* Style de base pour les cartes (.card) */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 0.5s ease forwards;
+}
+/* Effet de survol sur la carte : déplacement vers le haut et ombre augmentée */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+/* Transition sur l'image de la carte */
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+/* Effet de survol sur l'image de la carte : légère augmentation d'échelle pour créer un zoom */
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Styles pour le titre de la carte (.card-title) */
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    transition: color 0.4s ease;
+}
+/* Styles pour le texte de la carte (.card-text) */
+.card-text {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    transition: color 0.4s ease;
+}
+
+/* Animation "zoomIn" pour les cartes */
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* ===============================
+   Section Contact
+   =============================== */
+/* Transition sur les colonnes de la section Contact */
+main section.container .col-md-6 {
+    transition: transform 0.3s ease;
+}
+/* Effet de survol sur les colonnes de la section Contact : décalage vers le haut */
+main section.container .col-md-6:hover {
+    transform: translateY(-5px);
+}
+
+/* Styles pour le formulaire de contact (#contactForm) */
+#contactForm {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease;
+}
+/* Styles pour les champs du formulaire */
+#contactForm .form-control {
+    border-radius: 0.5rem;
+    border: 2px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+/* Styles appliqués aux champs lorsqu'ils sont en focus */
+#contactForm .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* Styles pour les labels du formulaire */
+#contactForm .form-label {
+    font-weight: 600;
+    color: #495057;
+}
+/* Styles de base pour le bouton du formulaire */
+#contactForm button {
+    /* Définit la couleur de fond du bouton */
+background-color: #007bff;
+/* Supprime toute bordure afin d'obtenir un aspect épuré */
+border: none;
+/* Ajoute un padding de 0.75rem en vertical et 1.5rem en horizontal 
+pour un espacement confortable du contenu */
+padding: 0.75rem 1.5rem;
+/* Arrondit les coins du bouton avec un rayon de 0.5rem pour un look plus moderne */
+border-radius: 0.5rem;
+/* Définit la taille de police à 1.1rem afin d'assurer une bonne lisibilité */
+font-size: 1.1rem;
+/* Applique une transition sur la couleur de fond et la transformation (scale, etc.)
+   qui dure 0.3s pour des modifications fluides lors d'interactions (ex. au survol) */
+transition: background-color 0.3s, transform 0.3s;
+
+}
+/* Effet de survol sur le bouton du formulaire : 
+changement de couleur et légère augmentation de taille */
+#contactForm button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ===============================
+   Effet de survol pour la carte Google Maps
+   =============================== */
+/* Transition appliquée à l'iframe (Google Maps) pour un effet de zoom au survol */
+iframe {
+    transition: transform 0.3s ease;
+}
+iframe:hover {
+    transform: scale(1.02);
+}
+
+/* ===============================
+   Adaptation au Mode Sombre pour Réalisations & Contact
+   =============================== */
+/* En mode sombre, modifie le fond et l'ombre du conteneur principal */
+body.dark-mode main section.container {
+    background: linear-gradient(135deg, #333, #222);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+/* En mode sombre, adapte la couleur des titres de section */
+body.dark-mode main section.container h1,
+body.dark-mode main section.container h2 {
+    color: #f8f9fa !important;
+}
+/* En mode sombre, modifie la bordure inférieure du titre <h1> */
+body.dark-mode main section.container h1 {
+    border-bottom-color: #4a00e0;
+}
+/* En mode sombre, modifie la bordure gauche du titre <h2> */
+body.dark-mode main section.container h2 {
+    border-left-color: #4a00e0;
+}
+
+/* Adaptation des cartes en mode sombre : changement de couleur de bordure */
+body.dark-mode .row.text-center > .col-md-4 > div {
+    border-color: #4a00e0;
+}
+
+/* Adaptation des témoignages en mode sombre : couleur du texte */
+body.dark-mode #temoignagesCarousel blockquote {
+    color: #f8f9fa;
+}
+
+/* ===============================
+   Responsive – Ajustements pour les écrans plus petits
+   =============================== */
+@media (max-width: 768px) {
+    /* Réduit la taille des titres pour les petits écrans */
+    main section.container h1,
+    main section.container h2 {
+        font-size: 1.75rem;
+    }
+    /* Diminue le padding du conteneur principal pour s'adapter aux écrans étroits */
+    main section.container {
+        padding: 2rem;
+    }
+    /* Réduit le padding des cartes dans les statistiques pour améliorer 
+    l'affichage sur petit écran */
+    main section.container .row.text-center > .col-md-4 > div {
+        padding: 1.5rem;
+    }
+}
+
+/* ========================
+   Scrollbar en Mode Clair
+   ======================== */
+/* Styles pour la scrollbar sur les navigateurs basés sur WebKit (Chrome, Safari, Edge) 
+en mode clair */
+/* 
+====================================================================================
+Styles personnalisés pour la scrollbar en mode clair pour les navigateurs WebKit 
+(Chrome, Safari, Edge, etc.)
+====================================================================================
+*/
+
+/* Cible la scrollbar via le sélecteur WebKit quand le <html> n'a PAS la classe "dark-mode" */
+html:not(.dark-mode)::-webkit-scrollbar {
+    /* Définit la largeur de la scrollbar à 12px */
+    width: 12px !important;
+}
+
+/* Cible la piste de la scrollbar (la partie où se déplace le pouce) en mode clair */
+html:not(.dark-mode)::-webkit-scrollbar-track {
+    /* Applique un fond dégradé vertical allant du gris clair (#e0e0e0) au blanc cassé (#fafafa) */
+    background: linear-gradient(180deg, #e0e0e0, #fafafa) !important;
+    /* Arrondit les coins de la piste avec un rayon de 6px */
+    border-radius: 6px !important;
+}
+
+/* Cible le pouce de la scrollbar (la partie mobile qui indique la position) en mode clair */
+html:not(.dark-mode)::-webkit-scrollbar-thumb {
+    /* Définit la couleur du pouce en violet (#8e2de2) */
+    background: #8e2de2 !important;
+    /* Arrondit les coins du pouce avec un rayon de 6px */
+    border-radius: 6px !important;
+    /* Ajoute une bordure transparente de 2px pour créer un espace intérieur */
+    border: 2px solid transparent !important;
+    /* Assure que le fond reste bien dans la bordure grâce à background-clip */
+    background-clip: content-box !important;
+}
+
+/* Change la couleur du pouce lorsque l'utilisateur le survole, pour un feedback visuel */
+html:not(.dark-mode)::-webkit-scrollbar-thumb:hover {
+    background: #4a00e0 !important;
+}
+
+/* 
+====================================================================================
+Styles spécifiques pour Firefox en mode clair 
+====================================================================================
+*/
+/* Pour Firefox, sans la classe "dark-mode" sur l'élément <html> */
+html:not(.dark-mode) {
+    /* Définit la largeur de la scrollbar comme "thin" pour une apparence plus discrète */
+    scrollbar-width: thin !important;
+    /* Spécifie les couleurs de la scrollbar : 
+       - Le pouce sera violet (#8e2de2) 
+       - La piste sera transparente */
+    scrollbar-color: #8e2de2 transparent !important;
+}
+
+/* ==========+++++++++++++++++++ CSS REALISATIONS ET CONTACT ++++++++++++++++++++========== */
+
+
+
+/* CSS DU MODAL DES COOKIES */
+/* Styles pour le modal des cookies */
+#cookieModal .modal-content {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border: none;
+    overflow: hidden;
+    animation: slideIn 0.6s ease-out forwards;
+  }
+  
+  /* Animation d'apparition du modal */
+  @keyframes slideIn {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  #cookieModal .modal-header {
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  #cookieModal .modal-header .modal-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  #cookieModal .modal-body {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  #cookieModal .modal-body img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    padding: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  #cookieModal .modal-footer {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  /* Boutons du modal avec effets de transition */
+  #cookieModal .btn {
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+  }
+  
+  #cookieModal .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Optionnel: personnalisation pour le bouton "N'accepter que les cookies essentiels" */
+  #cookieModal .btn-primary {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+  }
+  
+  #cookieModal .btn-primary:hover {
+    background-color: #ec971f;
+    border-color: #d58512;
+  }
+  

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<!-- Définir l'encodage de caractères en UTF-8 pour que tous les caractères spéciaux 
+ (accents, symboles...) s'affichent correctement -->
+<meta charset="UTF-8">
+
+<!-- Indiquer à Internet Explorer d'utiliser la dernière version de son moteur 
+ de rendu pour une meilleure compatibilité -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Configurer l'affichage pour les appareils mobiles : la largeur 
+ de la page s'adapte à la largeur de l'écran et le zoom initial est de 1 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Définir le titre de la page, affiché dans l'onglet du navigateur -->
+<title>Mentions légales | DYS-Positif</title>
+
+<!-- Fournir une description de la page pour les moteurs de recherche (SEO) -->
+<meta name="description" content="Mentions légales officielles du site de l'association DYS-POSITIF, acteur engagé pour les troubles DYS.">
+
+<!-- Lister des mots-clés relatifs au contenu de la page afin d'aider 
+ les moteurs de recherche (bien que cette balise soit moins utilisée aujourd'hui) -->
+<meta name="keywords" content="Mentions légales, Association DYS, DYS-POSITIF, site légal, éditeur, hébergeur, propriété intellectuelle">
+
+<!-- Identifier l'auteur ou l'organisation responsable du contenu de la page -->
+<meta name="author" content="Association Mains Tendues">
+
+<!-- Indiquer aux moteurs de recherche qu'ils peuvent indexer la page 
+ et suivre les liens qu'elle contient -->
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph pour les réseaux sociaux : ces balises améliorent 
+ la visibilité et l'apparence lors du partage sur des plateformes comme Facebook ou LinkedIn -->
+<meta property="og:title" content="Mentions légales | DYS-Positif">
+<!-- Définir le titre à afficher lors du partage sur les réseaux sociaux -->
+<meta property="og:description" content="Mentions légales officielles du site de l'association DYS-POSITIF, acteur engagé dans l'accompagnement des troubles DYS.">
+<!-- Fournir une description pour l'aperçu sur les réseaux sociaux -->
+<meta property="og:type" content="website">
+<!-- Spécifier le type de contenu (ici, un site web) -->
+<meta property="og:url" content="https://www.dys-positif.fr/mentions-legales.html">
+<!-- Indiquer l'URL canonique de la page à partager -->
+<meta property="og:image" content="https://www.dys-positif.fr/images/og-cover.jpg">
+<!-- Définir l'image d'aperçu qui s'affichera lors du partage sur les réseaux sociaux -->
+
+<!-- Twitter Card : ces balises permettent de contrôler l'affichage lors du partage sur Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<!-- Choisir une carte Twitter avec une grande image pour une meilleure visibilité -->
+<meta name="twitter:title" content="Mentions légales | DYS-Positif">
+<!-- Définir le titre à afficher dans la Twitter Card -->
+<meta name="twitter:description" content="Mentions légales officielles du site DYS-POSITIF. Informations sur l'éditeur, l’hébergeur et les droits de propriété.">
+<!-- Fournir une description pour l'aperçu sur Twitter -->
+<meta name="twitter:image" content="https://www.dys-positif.fr/images/og-cover.jpg">
+<!-- Définir l'image utilisée dans la Twitter Card -->
+
+<!-- Favicon : définir l'icône affichée dans l'onglet du navigateur et dans les favoris -->
+<link rel="icon" href="../images/logo.png" type="image/x-icon">
+
+<!-- Feuille de styles principale : lier le fichier CSS qui contient 
+ les règles de mise en forme du site -->
+<link rel="stylesheet" href="../css/styles3.css">
+
+
+</head>
+
+<body>
+
+  <!-- Bouton pour basculer entre le mode sombre et le mode clair -->
+  <button id="modeToggle" onclick="toggleDarkMode()" style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 10px 20px; background: #002244; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+    Mode Sombre
+  </button>
+
+  <main class="container py-5">
+
+    <h1>Mentions légales</h1>
+
+    <p>
+      <strong>Éditeur :</strong> Association DYS-POSITF<br><br>
+
+      <strong>Siège :</strong> MODE 83 Draguignan<br><br>
+
+      <strong>Représentant légal :</strong> Jean-Claude Lugo<br><br>
+
+      <strong>Contact :</strong> <a href="mailto:contact@dys-positif.fr">contact@dys-positif.fr</a><br><br>
+
+      <strong>Hébergement :</strong><br>
+      neocities - <a href="https://neocities.org/" target="_blank">https://neocities.org/</a><br><br>
+
+      <strong>Propriété intellectuelle :</strong><br>
+      Tous les contenus du site sont la propriété exclusive de l'association, sauf mention contraire.
+    </p>
+
+  </main>
+
+  <footer>
+
+    <div class="container text-center">
+
+      <p style="text-align: center;">&copy; 2025 Association DYS-POSITF. Tous droits réservés.</p>
+
+      <div class="footer-links">
+
+        <a href="mentions-legales.html">Mentions légales</a>
+
+        <a href="politique-confidentialite.html">Confidentialité</a>
+
+        <a href="politique-cookies.html">Cookies</a>
+
+        <a href="cgu.html">Conditions d’utilisation</a>
+
+        <a href="politique-enfants.html">Données des enfants</a>
+
+        <a href="politique-securite.html">Sécurité</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+<!-- Script JavaScript pour basculer entre le mode sombre et le mode clair -->
+<script>
+  // Définir la fonction 'toggleDarkMode' qui permettra de basculer 
+  // entre le mode sombre et le mode clair
+  function toggleDarkMode() {
+
+  // Bascule la classe "dark-mode" sur l'élément <html> pour changer l'apparence globale du site
+  document.documentElement.classList.toggle('dark-mode');
+
+  // Récupère l'élément bouton ayant l'ID 'modeToggle' afin de pouvoir modifier son texte
+  let btn = document.getElementById('modeToggle');
+
+  // Vérifie si l'élément <html> possède la classe "dark-mode" pour déterminer le mode actuellement activé
+  if (document.documentElement.classList.contains('dark-mode')) {
+
+   // Si la classe "dark-mode" est présente, modifie le texte du bouton pour indiquer "Mode Clair"
+   btn.innerText = 'Mode Clair';
+
+  } else {
+
+    // Sinon, modifie le texte du bouton pour indiquer "Mode Sombre"
+    btn.innerText = 'Mode Sombre';
+
+  }
+}
+
+</script>
+
+</body>
+
+</html>

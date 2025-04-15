@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Page d’accueil -->
+  <url>
+    <loc>https://www.dys-positif.fr/index.html</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>hebdomadaire</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Page des ateliers -->
+  <url>
+    <loc>https://www.dys-positif.fr/ateliers.html</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>mensuel</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Page statistiques et équipe -->
+  <url>
+    <loc>https://www.dys-positif.fr/statistiques.html</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>mensuel</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page réalisations et contact -->
+  <url>
+    <loc>https://www.dys-positif.fr/contact.html</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>mensuel</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Pages légales -->
+  <url>
+    <loc>https://www.dys-positif.fr/mentions-legales.html</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>annuel</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dys-positif.fr/politique-confidentialite.html</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>annuel</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dys-positif.fr/politique-cookies.html</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>annuel</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.dys-positif.fr/cgu.html</loc>
+    <lastmod>2025-04-13</lastmod>
+    <changefreq>annuel</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
+
+
+
+
+
+ <!-- Important à savoir :
+Dans un fichier sitemap.xml, la date (<lastmod>) doit impérativement 
+rester au format international ISO 8601, soit :
+AAAA-MM-JJ (par exemple 2025-04-13).
+
+👉 Les moteurs de recherche comme Google ne reconnaissent pas les formats français 
+tels que 13/04/2025 ou 13 avril 2025. -->

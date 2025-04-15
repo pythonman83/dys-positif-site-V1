@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Définition de l'encodage des caractères -->
+  <meta charset="utf-8">
+  <!-- Définition de la vue pour les appareils mobiles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Description du site pour les moteurs de recherche -->
+  <meta name="description" content="Galerie de réalisations et formulaire de contact pour troubles Dys">
+  <!-- Auteur du site -->
+  <meta name="author" content="Jean-Claude Lugo, formateur chez MODE 83 Draguignan">
+  <!-- Droits d'auteur -->
+  <meta name="copyright" content="Jean-Claude Lugo">
+  <!-- Instructions pour les robots des moteurs de recherche -->
+  <meta name="robots" content="index, follow">
+  <!-- Mots-clés pour les moteurs de recherche -->
+  <meta name="keywords" content="Dys, Dyslexie, Dyspraxie, Dysorthographie, Dyscalculie, Dysphasie, Services éducatifs, Soutien scolaire, Ergothérapie, Orthophonie, Neuropsychologie">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#ffffff">
+  <!-- URL canonique du site -->
+  <link rel="canonical" href="https://www.dys-positif.fr/">
+  <!-- Lien vers le plan du site -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  
+  <title>Réalisations & Contact - DYS-POSITF</title>
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Feuilles de styles personnalisées -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body>
+  <!-- Barre de navigation sticky avec toggle mode sombre/clair et icônes sociales -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <!-- Lien vers la page contact avec logo et titre -->
+      <a class="navbar-brand" href="contact.html" aria-label="Réalisations et contact">
+        <img src="images/logo.png" alt="logo de l'association" width="32" height="17" class="d-inline-block align-text-center">
+        Association DYS-POSITIF
+      </a>
+      
+      <!-- Bouton hamburger pour les petits écrans -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Menu de navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Menu de navigation -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="ateliers.html">Ateliers</a></li>
+          <li class="nav-item"><a class="nav-link" href="statistiques.html">Statistiques & équipe</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Réalisations & contact</a></li>
+        </ul>
+
+        <!-- Icônes de réseaux sociaux -->
+        <ul class="navbar-nav ms-3">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com" target="_blank" aria-label="Lien Facebook">
+              <i class="bi bi-facebook" title="facebook"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com" target="_blank" aria-label="Lien Instagram">
+              <i class="bi bi-instagram" title="instagram"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Bouton de bascule mode sombre/clair -->
+        <button id="modeToggle" class="btn btn-secondary ms-3" onclick="toggleDarkMode()">Mode sombre</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container my-5">
+      <!-- Titre de la section réalisations -->
+      <h1 class="mb-4">Nos réalisations</h1>
+      <!-- Galerie de réalisations sous forme de cartes Bootstrap -->
+      <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/moves.jpg" class="card-img-top" alt="Réalisation 1" style="border: 6px solid #8B4513; padding: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); object-fit: cover;">
+            <div class="card-body">
+              <h2 class="card-title">Jeu éducatif 1</h2>
+              <p class="card-text">Le jeu de mémoire en mouvement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/le-bingo-des-multiplications.jpg" class="card-img-top" alt="Réalisation 2" style="border: 6px solid #8B4513; padding: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.5);">
+            <div class="card-body">
+              <h2 class="card-title">Jeu éducatif 2</h2>
+              <p class="card-text">Le bingo des multiplications.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="images/epelle-et-decoupe-les-mots-en-syllabes.jpg" class="card-img-top" alt="Réalisation 3" style="border: 6px solid #8B4513; padding: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.5);">
+            <div class="card-body">
+              <h2 class="card-title">Jeu éducatif 3</h2>
+              <p class="card-text">Épelle et découpe les mots....</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Contact -->
+      <h2 class="mb-4">Contactez-nous</h2>
+      <div class="row">
+        <!-- Coordonnées et carte statique -->
+        <div class="col-md-6">
+          <h3>Nos coordonnées</h3>
+          <p>Adresse : 55 avenue du 4 septembre 83300 Draguignan</p>
+          <p>
+            Téléphone : 
+            <a href="tel:0494509890" style="text-decoration: none;">
+              04 94 50 98 90
+            </a>
+          </p>
+          <p>
+            Adresse e-mail : 
+            <a href="mailto:contact@dyspositif.fr" style="text-decoration: none;">
+              contact@dyspositif.fr
+            </a>
+          </p>
+          <div class="mt-3" id="mapPlaceholder" style="position: relative; cursor: pointer;">
+            <img src="images/map-placeholder.jpg" alt="image carte maps" style="width: 100%; height: 250px; object-fit: cover; border: 6px solid #8B4513; padding: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); border-radius: 5px;">
+            <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px; border-radius: 3px;">
+              Charger la carte
+            </div>
+          </div>
+        </div>
+        <!-- Formulaire de contact intégré à Formspree -->
+        <div class="col-md-6" style="border: 6px solid #8B4513; padding: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); border-radius: 5px;">
+          <!-- Le formulaire est configuré pour envoyer les données à Formspree -->
+          <form id="contactForm" action="https://formspree.io/f/xpwpbvjz" method="POST" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nom complet :</label>
+              <!-- Ajout de l'attribut name pour la soumission -->
+              <input type="text" class="form-control" id="name" name="name" required>
+              <div class="invalid-feedback">Veuillez renseigner votre nom complet.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Adresse mail :</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+              <div class="invalid-feedback">Veuillez renseigner une adresse mail valide.</div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message :</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+              <div class="invalid-feedback">Veuillez entrer votre message.</div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="color: #000;">Envoyer</button>
+            <!-- Zone d'affichage pour le statut de l'envoi -->
+            <p id="formStatus"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2025 Association Dys-Positif. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="politiques/mentions-legales.html" target="_blank" aria-label="Lien mentions légales">Mentions légales</a>
+        <a href="politiques/politique-confidentialite.html" target="_blank" aria-label="Lien confidentialités">Confidentialité</a>
+        <a href="politiques/politique-cookies.html" target="_blank" aria-label="Lien mentions cookies">Cookies</a>
+        <a href="cgu.html" target="_blank" aria-label="Lien mentions conditions d'utilisation">Conditions d'utilisation</a>
+        <a href="politiques/politique-enfants.html" target="_blank" aria-label="Lien mentions données des enfants">Données des enfants</a>
+        <a href="politiques/politique-securite.html" target="_blank" aria-label="Lien sécurité">Sécurité</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bouton pour remonter en haut de la page -->
+  <button id="backToTop" title="Remonter en haut" aria-label="Remonter en haut"
+    class="btn btn-primary rounded-circle shadow d-flex align-items-center justify-content-center"
+    style="width: 48px; height: 48px;">
+    <i class="bi bi-arrow-up-short fs-4"></i>
+  </button>
+
+  <!-- Script pour le bouton "Remonter en haut" -->
+  <script>
+    // Sélectionne le bouton de remontée
+    const backToTopBtn = document.getElementById("backToTop");
+    // Ajoute un écouteur pour afficher/masquer le bouton selon le défilement
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+    // Ajoute un événement pour faire défiler la page vers le haut de manière fluide
+    backToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <!-- Script de validation et envoi asynchrone du formulaire vers Formspree -->
+  <script>
+    (function () {
+      'use strict';
+      // Sélectionne le formulaire de contact et la zone d'affichage du statut
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      
+      // Ajoute un écouteur de soumission sur le formulaire
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault(); // Empêche l'envoi automatique du formulaire
+        
+        // Vérifie la validité du formulaire (les attributs "required", etc.)
+        if (!form.checkValidity()) {
+          event.stopPropagation();
+          // Ajoute la classe 'was-validated' pour activer les styles de validation CSS
+          form.classList.add('was-validated');
+          return;
+        }
+        
+        // Récupère les données du formulaire
+        const data = new FormData(form);
+        
+        try {
+          // Envoie asynchrone des données vers l'URL définie dans l'attribut "action" du formulaire
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          // Si la réponse HTTP indique un succès
+          if (response.ok) {
+            // Affiche un message d'alerte pour indiquer le succès de l'envoi
+            alert("Votre message a été envoyé avec succès et vous recevrez une réponse sous 48 h.");
+            // Affiche également un message dans la zone de statut (facultatif)
+            status.innerHTML = "Merci pour votre message !";
+            form.reset(); // Réinitialise le formulaire
+          } else {
+            // En cas d'erreur, récupère les messages d'erreur éventuels et les affiche
+            const result = await response.json();
+            if (result.errors) {
+              status.innerHTML = result.errors.map(error => error.message).join(", ");
+            } else {
+              status.innerHTML = "Oops! Une erreur s'est produite lors de l'envoi de votre message.";
+            }
+          }
+        } catch (error) {
+          // Affiche un message d'erreur en cas d'exception
+          status.innerHTML = "Oops! Une erreur s'est produite lors de l'envoi de votre message.";
+        }
+      });
+    })();
+  </script>
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script personnalisé (si nécessaire) -->
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Autoriser tout le reste du site à l'indexation
+Allow: /
+
+# Empêcher l’indexation des fichiers sensibles
+Disallow: /sitemap.xml
+Disallow: /privacy-policy.txt
+Disallow: /terms-of-service.txt
+Disallow: /cookie-policy.txt
+Disallow: /security-policy.txt
+Disallow: /data-privacy-policy.txt
+Disallow: /children-privacy-policy.txt
+Disallow: /user-privacy-policy.txt
+Disallow: /employee-privacy-policy.txt
+Disallow: /partner-privacy-policy.txt
+Disallow: /supplier-privacy-policy.txt
+Disallow: /client-privacy-policy.txt
+Disallow: /visitor-privacy-policy.txt
+Disallow: /registered-user-privacy-policy.txt
+
+# Lien vers le plan du site
+Sitemap: https://www.dys-positif.fr/sitemap.xml
+
+
+
+

@@ -1,0 +1,71 @@
+/images                // Dossier contenant toutes les images utilisées
+│   ├── atelier1.jpg
+│   ├── atelier2.jpg
+│   ├── atelier3.jpg
+│   ├── equipe1.jpg
+│   ├── equipe2.jpg
+│   ├── realisation1.jpg
+│   ├── realisation2.jpg
+│   ├── realisation3.jpg
+│   └── jeu-educatif.jpg
+
+Voici quelques recommandations pour optimiser les images dans votre projet 
+en tenant compte à la fois de la qualité visuelle et de la performance pour un design responsive :
+
+
+
+1. Images des ateliers (`atelier1.jpg`, `atelier2.jpg`, `atelier3.jpg`)
+
+- Taille recommandée :  
+  - 800 x 533 pixels pour un format 3:2 adapté aux cartes.
+  - Alternative : 1200 x 800 pixels pour une meilleure qualité sur grands écrans.
+- Conseil : Utilisez un format compressé (JPEG ou WebP) 
+afin de garder la taille du fichier raisonnable 
+(idéalement moins de 150 Ko).
+
+---
+
+2. Images de l’équipe (`equipe1.jpg`, `equipe2.jpg`)
+
+- Taille recommandée :  
+  - 600 x 600 pixels si vous souhaitez afficher des portraits en format carré 
+    (parfait pour des avatars ou des images arrondies).
+  - Alternative : 800 x 600 pixels (ratio 4:3) si vous préférez un format rectangulaire.
+- Conseil : Assurez-vous que les images soient nettes et de bonne résolution 
+pour mettre en valeur les membres de l’équipe.
+
+---
+
+3. Images des réalisations (`realisation1.jpg`, `realisation2.jpg`, `realisation3.jpg`)
+
+- Taille recommandée :  
+  - 800 x 600 pixels (ratio 4:3) pour une présentation uniforme dans la galerie.
+  - Alternative : 1200 x 800 pixels pour des images plus détaillées sur des écrans larges.
+- Conseil : Harmonisez les dimensions pour garantir une présentation cohérente et professionnelle.
+
+---
+
+4. Image du jeu éducatif (`jeu-educatif.jpg`)
+
+- Taille recommandée :  
+  - 1200 x 675 pixels (ratio 16:9) pour une image de type bannière 
+    attirante et adaptée à la mise en page responsive.
+- Conseil : Optimisez la taille du fichier pour assurer un chargement rapide, 
+  surtout si l'image est utilisée en fond ou en élément interactif avec le compte à rebours.
+
+---
+
+Remarques générales
+
+- Optimisation : 
+  Pensez à compresser vos images sans compromettre la qualité visuelle. 
+   Des outils comme [TinyPNG](https://tinypng.com) 
+   ou [Squoosh](https://squoosh.app) peuvent être utiles.
+- Formats adaptés : Privilégiez JPEG ou WebP pour les photographies et 
+  PNG pour des images nécessitant une transparence.
+-Responsive : Utilisez des attributs `srcset` et `sizes` dans vos balises `<img>` 
+  pour fournir différentes résolutions selon la taille de l'écran, 
+  améliorant ainsi la performance sur mobile et desktop.
+
+En suivant ces recommandations, vous assurerez une qualité d’image optimale 
+tout en gardant votre site performant et agréable à utiliser sur tous types d’appareils.

@@ -1,0 +1,448 @@
+/* ---- STYLE GLOBAL DU CORPS DE LA PAGE ---- */
+
+/* Définir la police de toute la page */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Appliquer un fond en dégradé animé de 4 couleurs */
+  background: linear-gradient(-45deg, #e0f7fa, #f1f8e9, #fce4ec, #e3f2fd);
+
+  /* Répéter le dégradé 4 fois plus grand que la taille de la page pour l'animer */
+  background-size: 400% 400%;
+
+  /* Appliquer une animation appelée 'backgroundMove' en boucle infinie */
+  animation: backgroundMove 15s ease infinite;
+
+  /* Couleur du texte par défaut */
+  color: #2f3e46;
+
+  /* Supprimer les marges par défaut du navigateur */
+  margin: 0;
+
+  /* Supprimer les paddings par défaut du navigateur */
+  padding: 0;
+
+  /* Transition douce si on change un style (utile si tu ajoutes d'autres effets dynamiques plus tard) */
+  transition: background 1s ease;
+}
+
+
+/* ---- BLOC PRINCIPAL ---- */
+
+/* Styliser le conteneur <main> */
+main {
+  /* Largeur maximale du bloc */
+  max-width: 900px;
+
+  /* Centrer horizontalement le bloc avec marges verticales */
+  margin: 4rem auto;
+
+  /* Ajouter de l'espace intérieur au contenu */
+  padding: 2.5rem;
+
+  /* Fond blanc légèrement transparent */
+  background: rgba(255, 255, 255, 0.9);
+
+  /* Coins arrondis */
+  border-radius: 20px;
+
+  /* Ombre portée floue pour un effet de profondeur */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  /* Animation d’apparition en glissement vers le haut */
+  animation: fadeInUp 1.2s ease both;
+}
+
+
+/* ---- TITRE PRINCIPAL H1 ---- */
+
+h1 {
+  /* Taille de police très grande pour le titre */
+  font-size: 2.8rem;
+
+  /* Appliquer un dégradé comme fond du texte */
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+
+  /* Spécifier que le fond ne s'applique qu'à la forme du texte (standard) */
+  background-clip: text;
+
+  /* Spécifier la même chose mais pour les navigateurs WebKit (Chrome/Safari) */
+  -webkit-background-clip: text;
+
+  /* Rendre le texte transparent pour que le fond dégradé apparaisse */
+  -webkit-text-fill-color: transparent;
+
+  /* Centrer le texte */
+  text-align: center;
+
+  /* Ajouter de l’espace en bas du titre */
+  margin-bottom: 2rem;
+
+  /* Appliquer une animation douce de "glow" (halo lumineux) sur le texte */
+  animation: textGlow 2.5s ease-in-out infinite alternate;
+
+  /* Transition fluide quand on fait un hover */
+  transition: transform 0.3s ease;
+}
+
+/* Effet au survol du titre : agrandissement léger */
+h1:hover {
+  transform: scale(1.05);
+}
+
+
+/* ---- SOUS-TITRES H2 ---- */
+
+h2 {
+  /* Taille de police légèrement plus petite que h1 */
+  font-size: 1.9rem;
+
+  /* Ajouter une ligne horizontale en bas du titre */
+  border-bottom: 2px solid #9e9e9e;
+
+  /* Ajouter de l'espace sous la ligne */
+  padding-bottom: 0.5rem;
+
+  /* Marge en haut du sous-titre */
+  margin-top: 3rem;
+
+  /* Centrer le sous-titre */
+  text-align: center;
+
+  /* Couleur du texte */
+  color: #37474f;
+
+  /* Positionnement relatif pour pouvoir ajouter un élément décoratif avec ::after */
+  position: relative;
+}
+
+/* Ligne décorative animée sous le h2 */
+h2::after {
+  content: ''; /* Nécessaire pour afficher un élément avec ::after */
+
+  /* Position absolue par rapport au h2 */
+  position: absolute;
+
+  /* Taille de la ligne */
+  width: 80px;
+  height: 4px;
+
+  /* Dégradé coloré de la ligne */
+  background: linear-gradient(to right, #64b5f6, #9575cd);
+
+  /* Positionner en bas du h2 */
+  bottom: -6px;
+
+  /* Centrer horizontalement */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Arrondir les coins de la ligne */
+  border-radius: 2px;
+}
+
+
+/* ---- LIENS <a> ---- */
+
+/* Style des liens non survolés */
+a {
+  /* Couleur principale */
+  color: #007aff;
+
+  /* Enlever le soulignement */
+  text-decoration: none;
+
+  /* Position relative pour que le ::after fonctionne */
+  position: relative;
+
+  /* Transition douce pour les effets */
+  transition: all 0.3s ease;
+}
+
+/* Barre animée sous les liens (effet au survol) */
+a::after {
+  content: '';
+  position: absolute;
+
+  /* Commence avec largeur 0 (invisible) */
+  width: 0%;
+  height: 2px;
+
+  /* Positionné sous le texte */
+  bottom: -2px;
+  left: 0;
+
+  /* Couleur de la barre */
+  background-color: #007aff;
+
+  /* Animation de la largeur */
+  transition: 0.4s;
+}
+
+/* Quand on survole le lien */
+a:hover {
+  color: #004fc4; /* Couleur plus foncée */
+}
+
+/* Agrandir la barre de survol */
+a:hover::after {
+  width: 100%;
+}
+
+
+/* ---- LISTES NON STYLÉES ---- */
+
+ul.list-unstyled {
+  /* Enlever le padding à gauche */
+  padding-left: 0;
+
+  /* Enlever les puces */
+  list-style: none;
+
+  /* Centrer les éléments */
+  text-align: center;
+
+  /* Effet d’apparition fluide */
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Style des éléments de liste */
+ul.list-unstyled li {
+  /* Espacement entre les items */
+  margin: 1rem 0;
+
+  /* Taille du texte */
+  font-size: 1.15rem;
+
+  /* Transition pour les effets au survol */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Effet au survol des <li> */
+ul.list-unstyled li:hover {
+  transform: translateX(5px); /* Glisse légèrement vers la droite */
+  color: #5e35b1; /* Couleur violette au survol */
+}
+
+
+/* ---- RESPONSIVE DESIGN (pour petits écrans) ---- */
+
+@media screen and (max-width: 768px) {
+  main {
+    margin: 2rem 1rem; /* Réduire les marges */
+    padding: 1.5rem;   /* Réduire l’espace intérieur */
+  }
+
+  h1 {
+    font-size: 2.2rem; /* Réduire la taille du titre principal */
+  }
+
+  h2 {
+    font-size: 1.6rem; /* Réduire la taille des sous-titres */
+  }
+}
+
+/* FOOTER ÉPOUSTOUFLANT */
+footer {
+  background: linear-gradient(to right, #16222a, #3a6073);
+  color: #ffffff;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  color: #ffffffcc;
+}
+
+footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer .footer-links a {
+  color: #ffffffcc;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  footer .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Animation au survol */
+footer .footer-links a {
+  position: relative;
+  overflow: hidden;
+}
+
+footer .footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffcc00;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+footer .footer-links a:hover::after {
+  transform: translateX(0);
+}
+
+
+
+/* ---- ANIMATIONS CSS ---- */
+
+/* Animation pour le fond animé */
+@keyframes backgroundMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Apparition en glissant depuis le bas */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apparition simple par fondu */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Effet de lumière pulsée (glow) sur le texte */
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(37, 117, 252, 0.8);
+  }
+}
+
+/* ========================
+   Scrollbar en Mode Clair
+   ======================== */
+/* Styles pour la scrollbar sur les navigateurs basés sur WebKit (Chrome, Safari, Edge) 
+en mode clair */
+/* 
+====================================================================================
+Styles personnalisés pour la scrollbar en mode clair pour les navigateurs WebKit 
+(Chrome, Safari, Edge, etc.)
+====================================================================================
+*/
+
+/* Cible la scrollbar via le sélecteur WebKit quand le <html> n'a PAS la classe "dark-mode" */
+html:not(.dark-mode)::-webkit-scrollbar {
+  /* Définit la largeur de la scrollbar à 12px */
+  width: 12px !important;
+}
+
+/* Cible la piste de la scrollbar (la partie où se déplace le pouce) en mode clair */
+html:not(.dark-mode)::-webkit-scrollbar-track {
+  /* Applique un fond dégradé vertical allant du gris clair (#e0e0e0) au blanc cassé (#fafafa) */
+  background: linear-gradient(180deg, #e0e0e0, #fafafa) !important;
+  /* Arrondit les coins de la piste avec un rayon de 6px */
+  border-radius: 6px !important;
+}
+
+/* Cible le pouce de la scrollbar (la partie mobile qui indique la position) en mode clair */
+html:not(.dark-mode)::-webkit-scrollbar-thumb {
+  /* Définit la couleur du pouce en violet (#8e2de2) */
+  background: #8e2de2 !important;
+  /* Arrondit les coins du pouce avec un rayon de 6px */
+  border-radius: 6px !important;
+  /* Ajoute une bordure transparente de 2px pour créer un espace intérieur */
+  border: 2px solid transparent !important;
+  /* Assure que le fond reste bien dans la bordure grâce à background-clip */
+  background-clip: content-box !important;
+}
+
+/* Change la couleur du pouce lorsque l'utilisateur le survole, pour un feedback visuel */
+html:not(.dark-mode)::-webkit-scrollbar-thumb:hover {
+  background: #4a00e0 !important;
+}
+
+/* 
+====================================================================================
+Styles spécifiques pour Firefox en mode clair 
+====================================================================================
+*/
+/* Pour Firefox, sans la classe "dark-mode" sur l'élément <html> */
+html:not(.dark-mode) {
+  /* Définit la largeur de la scrollbar comme "thin" pour une apparence plus discrète */
+  scrollbar-width: thin !important;
+  /* Spécifie les couleurs de la scrollbar : 
+     - Le pouce sera violet (#8e2de2) 
+     - La piste sera transparente */
+  scrollbar-color: #8e2de2 transparent !important;
+}
+
+/* CSS MODE SOMBRE  */
+/* Règles pour le mode sombre (appliquées lorsque la classe 'dark-mode' est ajoutée à <html>) */
+html.dark-mode body {
+  /* Fond de page sombre */
+  background: #2f2f2f !important;
+  /* Couleur de texte claire */
+  color: #cccccc !important;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+html.dark-mode main {
+  /* Fond du conteneur principal sombre avec légère transparence */
+  background: rgba(40, 40, 40, 0.9);
+}
+
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode p,
+html.dark-mode a {
+  /* Couleurs de texte adaptées au mode sombre */
+  color: #cccccc !important;
+}
+
+html.dark-mode a {
+  /* Couleur de lien en mode sombre */
+  color: #66aaff !important;
+}
+
+html.dark-mode footer {
+  /* Fond de footer sombre */
+  background: #1f1f1f;
+  color: #aaaaaa;
+}
+
+html.dark-mode footer .footer-links a {
+  /* Couleur des liens dans le footer en mode sombre */
+  color: #dddddd;
+}
+
+html.dark-mode footer .footer-links a:hover {
+  /* Couleur au survol des liens en mode sombre */
+  color: #ffcc00;
+}
